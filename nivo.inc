@@ -767,7 +767,7 @@ function nivo__syntax( $shortcode='nivo' ) {
   $nivo_syntax = array( "post_type" => bw_skv( "attachment", "<i>post_type</i>", "Post type to display" )
                  , "theme" => bw_skv( "default", "bar|dark|light|orman|pascal|oik271|default271", "Theme for the slideshow" )
                  , "class" => bw_skv( "", "<i>classes</i>", "CSS classes" )
-                 , "link" => bw_skv( "y", "n|file", "Link the images to the target post/page or media file" )
+                 , "link" => bw_skv( "y", "n|file|full", "Link the images to the target post/page or media file" )
                  , "caption" => bw_skv( "y", "n", "Display the image title as the caption" )
                  , "format" => bw_skv( null, "<i>format</i>", "field format string" )
                  , "ribbon" => bw_skv( "y", "n", "Display the ribbon, if the theme supports it" )
