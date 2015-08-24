@@ -123,4 +123,4 @@ Modified: bobbingwide for oik-nivo-slider
 */
 
 
-.nivoSlider a.iframe:first-child img  { margin-left: 19px; }
+.nivoSlider a.iframe:first-child img  { margin-left: 19px; margin-top: 0px; }
