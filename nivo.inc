@@ -1,4 +1,4 @@
-<?php // (C) Copyright Bobbing Wide 2012-2014
+<?php // (C) Copyright Bobbing Wide 2012-2015
 
 /**
  * Format the Nivo output for posts which have attached images 
@@ -6,13 +6,14 @@
  * When the thumbnail size is "full" then this will only work when there is an attached image
  * It won't find the featured image. This is a limitation of bw_thumbnail() **?**
  *
+ * Note: This routine only supports link=y or link=n.  It doesn't support link=file nor link=full 
+ * as it's intended for creating links to the particular post not to the attached image.
+ *
  * @param post $post - a post object
  * @param array $atts - array of shortcode parameters 
  * 
 */
 function bw_format_nivo( $post, $atts ) {
-  //setup_postdata( $post );
-  
   $alt = null;
   if ( bw_validate_torf( $atts['caption'] ) ) {
     $title = get_the_title( $post->ID );
@@ -24,12 +25,7 @@ function bw_format_nivo( $post, $atts ) {
   } else {
     $title = null;
   }   
-
-
-  //if ( bw_validate_torf( $atts['caption'] ) )
-  //  $atts['title'] = get_the_title( $post->ID );
   $atts['title'] = $title;  
-
   $atts['thumbnail'] = bw_array_get( $atts, "thumbnail", "full" );
   $thumbnail = bw_thumbnail( $post->ID, $atts );
   $permalink = get_permalink( $post->ID );
@@ -362,6 +358,11 @@ function bw_format_nivo_html_captions( $posts, $atts ) {
  * Since there can be multiple sliders on a page the unique ID in the title attribute needs to take into account the slider instance (slider-id).
  * The hyphen between the slider-id and post id helps ensure uniqueness.
  *
+ * Added support for link=full, in addition to link=file. 
+ * link=full will open the link to the original image
+ * link=file opens the links to the image of the selected thumbnail size
+ * @TODO Add support for other file sizes if deemed really necessary.
+ *
  * @param post $post - the post to be displayed
  * @param array $atts - array of parameters; name value pairs
  *
@@ -389,6 +390,9 @@ function bw_format_nivo_attachment( $post, $atts ) {
       alink( "iframe", $permalink , $thumbnail, null );  
     } elseif ( $atts['link'] == "file" ) {
       alink( null, $image, $thumbnail, null, null, kv( "rel", $atts["slider-id"] )); 
+		} elseif ( $atts['link'] == "full" ) {
+			$full_image = bw_get_attached_file_name( $post->ID, array( "thumbnail" => "full" ) );
+      alink( null, $full_image, $thumbnail, null, null, kv( "rel", $atts["slider-id"] )); 
     } else { 
       e( $thumbnail );
     }    
@@ -445,7 +449,10 @@ function bw_get_spt_screenshot( $atts ) {
 /**
  * Get posts for the NextGen gallery
  *
- * Developed using NextGEN version 1.9.2 
+ * Developed using NextGEN version 1.9.2
+ * 
+ * @param array $atts shortcode attributes
+ * @return array images returned from NextGen 
  */
 function bw_get_spt_nggallery( $atts ) {
   $explode = explode( ':', $atts['post_type'] );
