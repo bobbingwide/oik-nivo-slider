@@ -586,7 +586,7 @@ function bw_nivo_enqueue_script( $version ) {
   } else {
     $script = "jquery.nivo.slider-$version.pack.js"; 
   } 
-  wp_enqueue_script( "nivo-slider-$version-js", plugin_dir_url( __FILE__) . $script, array( 'jquery') );
+  wp_enqueue_script( "nivo-slider-$version-js", oik_url( $script, "oik-nivo-slider" ), array( 'jquery') );
 }
 
 /**
@@ -688,9 +688,9 @@ function bw_nivo_slider( $atts=null ) {
     $posts = bw_get_posts( $atts );
   }  
   if ( $posts ) {
-    wp_enqueue_style( "nivo${theme}", plugin_dir_url( __FILE__). "themes/${theme}/${theme}.css" ); 
+    wp_enqueue_style( "nivo${theme}", oik_url( "themes/${theme}/${theme}.css", "oik-nivo-slider" ) ); 
     $version = bw_nivo_version( $theme );
-    wp_enqueue_style( "nivoCSS-$version", plugin_dir_url( __FILE__). "nivo-slider-$version.css" ); 
+    wp_enqueue_style( "nivoCSS-$version", oik_url( "nivo-slider-$version.css", "oik-nivo-slider" ) ); 
     bw_nivo_enqueue_script( $version );
     $slider_id = bw_slider_id();
     //e( '<script type="text/javascript">jQuery(window).load(function() {  jQuery(\'#slider-'. $slider_id. '\').nivoSlider(); });</script>' );
@@ -711,7 +711,7 @@ function bw_nivo_slider( $atts=null ) {
     }  
     if ( bw_validate_torf( $atts['link'] ) ) {
       $oik_nc_script = 'jquery.oik-nc-click.js';  
-      wp_enqueue_script( 'oik-nc-click.js', plugin_dir_url( __FILE__) . $oik_nc_script, array( "nivo-slider-$version-js" ) ); 
+      wp_enqueue_script( 'oik-nc-click.js', oik_url( $oik_nc_script, "oik-nivo-slider" ), array( "nivo-slider-$version-js" ) ); 
       //e( '<script type="text/javascript">jQuery(window).load(function() {  jQuery(\'#slider-'. $slider_id. '\').oikNCClick(); });</script>' );
       bw_jquery( "#slider-$slider_id", "oikNCClick", null, true );
     }  
