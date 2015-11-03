@@ -70,12 +70,14 @@ Supports Thumbs: true
 .theme-custom .nivo-controlNav.nivo-thumbs-enabled {
 	width: 100%;
 }
+
 .theme-custom .nivo-controlNav.nivo-thumbs-enabled a {
 	width: auto;
 	height: auto;
 	background: none;
 	margin-bottom: 5px;
 }
+
 .theme-custom .nivo-controlNav.nivo-thumbs-enabled img {
 	display: block;
 	width: 120px;
