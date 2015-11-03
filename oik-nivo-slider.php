@@ -1,13 +1,16 @@
 <?php
 /**
 Plugin Name: oik-nivo-slider
-Depends: oik base plugin
+Depends: oik
 Plugin URI: http://www.oik-plugins.com/oik-plugins/oik-nivo-slider/
 Description: [nivo] shortcode for the Nivo slider using oik
-Version: 1.14.0
+Version: 1.14.1
 Author: bobbingwide
-Author URI: http://www.bobbingwide.com
-License: GPL2
+Author URI: http://www.oik-plugins.com/author/bobbingwide
+Text Domain: oik-nivo-slider
+Domain Path: /languages/
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
     Copyright 2012-2015 Bobbing Wide (email : herb@bobbingwide.com )
 
@@ -28,7 +31,7 @@ License: GPL2
 */
 
 /**
- * Implement "oik_add_shortcodes" action for the oik-nivo-slider 
+ * Implement "oik_loaded" action for the oik-nivo-slider 
  */
 function oik_nivo_add_shortcodes() {
   bw_add_shortcode( "nivo", "bw_nivo_slider", oik_path( "nivo.inc", "oik-nivo-slider" ), false ); 
@@ -54,7 +57,6 @@ function oik_nivo_activation() {
   static $plugin_basename = null;
   if ( !$plugin_basename ) {
     $plugin_basename = plugin_basename(__FILE__);
-    // bw_trace2( $plugin_basename, "plugin_basename" );
     add_action( "after_plugin_row_oik-nivo-slider/oik-nivo-slider.php" , "oik_nivo_activation" );   
     if ( !function_exists( "oik_plugin_lazy_activation" ) ) { 
       require_once( "admin/oik-activation.php" );
@@ -69,7 +71,7 @@ function oik_nivo_activation() {
  */                  
 function oik_nivo_loaded() {
   add_action( "admin_notices", "oik_nivo_activation", 12 );
-  add_action( "oik_add_shortcodes", "oik_nivo_add_shortcodes" );
+  add_action( "oik_loaded", "oik_nivo_add_shortcodes" );
   add_action( "oik_admin_menu", "oik_nivo_admin_menu" );
 }
 
