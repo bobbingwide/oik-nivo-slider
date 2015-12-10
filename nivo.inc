@@ -385,6 +385,9 @@ function bw_format_nivo_attachment( $post, $atts ) {
   
   if ( $image ) {
     $thumbnail = retimage( null, $image , $title, $alt, null, kv("data-thumb", $image) );
+		if ( $atts['count'] ) {
+			$thumbnail = str_replace( "/>", ' style="display:none" />', $thumbnail );
+		}
     if ( bw_validate_torf( $atts['link'] ) ) {
       $permalink = bw_get_image_link( $post->ID );
       alink( "iframe", $permalink , $thumbnail, null );  
@@ -481,6 +484,10 @@ function bw_format_nivo_screenshot( $fileurl, $atts ) {
     $caption = null;
   }    
   $image = retimage( null, $fileurl, $caption, null, null, kv("data-thumb", $fileurl) );
+	
+	if ( $atts['count'] ) {
+		$image = str_replace( "/>", ' style="display:none" />', $image );
+	}
   e( $image );
 }
 
@@ -730,7 +737,9 @@ function bw_nivo_slider( $atts=null ) {
     sdiv( "nivoSlider", "slider-$slider_id" );
     $atts['slider-id'] = "slider-$slider_id";
     $funcname = bw_funcname( "bw_format_nivo", $atts['post_type'] );
+		$count = 0;
     foreach ( $posts as $post ) {
+			$atts['count'] = $count++;
       $funcname( $post, $atts );
     }
     ediv();
@@ -765,7 +774,7 @@ function _sc_thumbnail_full() {
  */ 
 function nivo__syntax( $shortcode='nivo' ) {
   $nivo_syntax = array( "post_type" => bw_skv( "attachment", "<i>post_type</i>", "Post type to display" )
-                 , "theme" => bw_skv( "default", "bar|dark|light|orman|pascal|oik271|default271", "Theme for the slideshow" )
+                 , "theme" => bw_skv( "default", "bar|custom|dark|light|orman|pascal|oik271|default271", "Theme for the slideshow" )
                  , "class" => bw_skv( "", "<i>classes</i>", "CSS classes" )
                  , "link" => bw_skv( "y", "n|file|full", "Link the images to the target post/page or media file" )
                  , "caption" => bw_skv( "y", "n", "Display the image title as the caption" )
