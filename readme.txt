@@ -3,8 +3,8 @@ Contributors: bobbingwide
 Donate link: http://www.oik-plugins.com/oik/oik-donate/
 Tags:  responsive, Nivo, slider, shortcode, [nivo], oik, jQuery, slideshow, posts, pages, attachments
 Requires at least: 3.5
-Tested up to: 4.3
-Stable tag: 1.14.0
+Tested up to: 4.4
+Stable tag: 1.14.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,7 +13,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 == Description ==
 [nivo] shortcode for the jQuery Nivo slider; "The Most Awesome jQuery Image Slider"; reputed to be the world's most popular jQuery image slider.
 
-= New featured in nivo v1.14.0 =
+= New features in nivo v1.14.1 =
+
+* Now supports theme=custom
+
+= New feature in nivo v1.14.0 =
 
 * Add support for link=full, to open the original full sized image rather than the selected thumbnail= size
 
@@ -93,7 +97,7 @@ The basic parameters that control the display of the Nivo slider are:
 
 `[nivo
   theme="default|bar|dark|light|oik|orman|pascal|default271|oik271 - Theme for the slideshow"
-  link="y|n|file - Link the images to the target post/page or media file"
+  link="y|n|file|full - Link the images to the target post/page or media file"
   caption="y|n - Display the image title as the caption"
   ribbon="y|n - Display the ribbon, if the theme supports it (version 271 only)"
   thumbnail="full|thumbnail|medium|large|nnn|wxh - image size"
@@ -104,6 +108,7 @@ The basic parameters that control the display of the Nivo slider are:
 
 = How do I make the images link to my content? = 
 There are three methods.
+
 1. Use the oik custom link URL field
 1. Build the slideshow from images attached to related content
 1. Use the format= parameter 
@@ -139,9 +144,9 @@ Use the post_type parameter to specify the content type and
 = What is the FULL syntax for the [nivo] shortcode = 
 `[nivo
   post_type="attachment|post_type|special:value - Post type to display"
-  theme="default|bar|dark|light|oik|orman|pascal|default271|oik271 - Theme for the slideshow"
+  theme="default|custom|bar|dark|light|oik|orman|pascal|default271|oik271 - Theme for the slideshow"
   class="|classes - CSS classes"
-  link="y|n|file - Link the images to the target post/page or media file"
+  link="y|n|file|full - Link the images to the target post/page or media file"
   caption="y|n - Display the image title as the caption"
   ribbon="y|n - Display the ribbon, if the theme supports it"
   thumbnail="full|thumbnail|medium|large|nnn|wxh - image size"
@@ -262,6 +267,9 @@ YES. See [oik-nivo-slider](http://www.oik-plugins.com/oik-plugins/oik-nivo-slide
 12. oik Nivo slider options page
 
 == Upgrade Notice ==
+= 1.14.1 =
+Upgrade if you use do_shortcode('[nivo]') in your theme or want to use the new 'custom' theme
+
 = 1.14.0 =
 Now depends on oik v2.4 or higher. Upgrade if you're using the Nivo v2.7.1 themes or require link=full capability
 
@@ -317,6 +325,11 @@ Now depends on oik v2.4 or higher. Upgrade if you're using the Nivo v2.7.1 theme
 * first version works with oik version 1.11
 
 == Changelog ==
+= 1.14.1 = 
+* Added: New theme called 'custom' which allows you more control over styling. Issue #2
+* Changed: Logic now sets style=display:none on all but the first image to be displayed, for attachments and screenshots 
+* Fixed: Reverted deferred registration of the [nivo] shortcode. Issue #1
+
 = 1.14.0 =
 * Added: link=full parameter option to open the full sized image.
 * Changed: Supports symlinked installations. 
