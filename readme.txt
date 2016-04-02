@@ -1,5 +1,5 @@
 === oik-nivo-slider ===
-Contributors: bobbingwide
+Contributors: bobbingwide, vsgloik
 Donate link: http://www.oik-plugins.com/oik/oik-donate/
 Tags:  responsive, Nivo, slider, shortcode, [nivo], oik, jQuery, slideshow, posts, pages, attachments
 Requires at least: 3.5

@@ -1,0 +1,185 @@
+# Copyright (C) 2015 oik-nivo-slider
+# This file is distributed under the same license as the oik-nivo-slider package.
+msgid ""
+msgstr ""
+"Project-Id-Version: oik-nivo-slider 1.14.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/oik-nivo-slider\n"
+"POT-Creation-Date: 2015-08-24 15:08:26+00:00\n"
+"MIME-Version: 1.0\n"
+"Plural-Forms: nplurals=2; plural=n == 1 ? 0 : 1;\n"
+"Language: bb_BB\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+#: admin/oik-nivo-slider.php:15
+msgid "Nivo slider options"
+msgstr "Nvio sidelr oontips"
+
+#: admin/oik-nivo-slider.php:16
+msgid "Default slider options"
+msgstr "Dlufeat seidlr ooiptns"
+
+#: admin/oik-nivo-slider.php:19
+msgid "Usage notes"
+msgstr "Ugase netos"
+
+#: admin/oik-nivo-slider.php:69
+msgid "Effect (effect=<i>effect</i>)"
+msgstr "Efecft (effect=<i>effect</i>)"
+
+#: admin/oik-nivo-slider.php:71
+msgid "Slices"
+msgstr "Siecls"
+
+#: admin/oik-nivo-slider.php:72
+msgid "Box cols"
+msgstr "BOx clos"
+
+#: admin/oik-nivo-slider.php:73
+msgid "Box rows"
+msgstr "BOx rows"
+
+#: admin/oik-nivo-slider.php:74
+msgid "Anim speed"
+msgstr "Anim seepd"
+
+#: admin/oik-nivo-slider.php:75
+msgid "Pause time (pause=<i>nnnn</i>)"
+msgstr "Pasue tmie (pause=<i>nnnn</i>)"
+
+#: admin/oik-nivo-slider.php:86
+msgid "Caption opacity"
+msgstr "Ctoiapn otpaicy"
+
+#: admin/oik-nivo-slider.php:91
+msgid "Save changes"
+msgstr "Svae cnheags"
+
+#: admin/oik-nivo-slider.php:101
+msgid ""
+"These options for the jQuery Nivo slider control the default behaviour for "
+"each instance of the slider."
+msgstr ""
+"Teshe oniotps fOr thE jeruQy Nivo sdelir ctonrol thE dfuaelt bvoeuhair fOr "
+"each intncase Of thE sdleir."
+
+#: nivo.inc:758
+msgid "thumbnail|medium|large|nnn|wxh"
+msgstr "tmhinubal|mudeim|lgare|nnn|wxh"
+
+#: nivo.inc:758
+msgid "image size"
+msgstr "iagme szie"
+
+#: nivo.inc:767
+msgid "<i>post_type</i>"
+msgstr "<i>post_type</i>"
+
+#: nivo.inc:767
+msgid "Post type to display"
+msgstr "Psot tpye tO dlisapy"
+
+#: nivo.inc:768
+msgid "bar|dark|light|orman|pascal|oik271|default271"
+msgstr "bAr|drak|lghit|omran|paascl|OIk271|dfeualt271"
+
+#: nivo.inc:768
+msgid "Theme for the slideshow"
+msgstr "Thmee fOr thE sohsedilw"
+
+#: nivo.inc:769
+msgid "<i>classes</i>"
+msgstr "<i>classes</i>"
+
+#: nivo.inc:769
+msgid "CSS classes"
+msgstr "CSS calsess"
+
+#: nivo.inc:770
+msgid "n|file|full"
+msgstr "n|flie|full"
+
+#: nivo.inc:770
+msgid "Link the images to the target post/page or media file"
+msgstr "Lnik thE imegas tO thE traget psot/page Or midea flie"
+
+#: nivo.inc:771 nivo.inc:773
+msgid "n"
+msgstr "n"
+
+#: nivo.inc:771
+msgid "Display the image title as the caption"
+msgstr "Dliapsy thE igmae tlite As thE cptiaon"
+
+#: nivo.inc:772
+msgid "<i>format</i>"
+msgstr "<i>format</i>"
+
+#: nivo.inc:772
+msgid "field format string"
+msgstr "flied fmoart srting"
+
+#: nivo.inc:773
+msgid "Display the ribbon, if the theme supports it"
+msgstr "Dsilpay thE rboibn, If thE temhe sotuprps It"
+
+#: nivo.inc:776 nivo.inc:777 nivo.inc:779
+msgid "n|y"
+msgstr "n|y"
+
+#: nivo.inc:776
+msgid "Thumbnail navigation"
+msgstr "Tmuniabhl naivagtion"
+
+#: nivo.inc:777
+msgid "Control navigation"
+msgstr "Cnotrol ntigoaavin"
+
+#: nivo.inc:778
+msgid "<i>pause</i>"
+msgstr "<i>pause</i>"
+
+#: nivo.inc:778
+msgid "Pause time in milli seconds"
+msgstr "Psaue tmie In milli socndes"
+
+#: nivo.inc:779
+msgid "Manual advance"
+msgstr "Mnaual acnvdae"
+
+#: nivo.inc:780
+msgid ""
+"random|sliceDownRight|sliceDownLeft|sliceUpRight|sliceUpLeft|sliceUpDown|"
+"sliceUpDownLeft |fold|fade|boxRandom|boxRain|boxRainReverse|boxRainGrow|"
+"boxRainGrowReverse|slideInLeft|slideInRight"
+msgstr ""
+"rodanm|soRlDewciighnt|sLclnDefiowet|shlegUcpiiRt|sLeliUepfct|sliewoDUpcn|"
+"spncUDwoeifelLt |fold|fdae|bRooadxnm|boaxiRn|bRarsinvRxeoee|bxrRGoanoiw|"
+"bevwsorRaoiRxnerGe|slfneLdiIet|sIlhdgniieRt"
+
+#: nivo.inc:780
+msgid "transition effect"
+msgstr "troatnsiin ecefft"
+
+#. Plugin Name of the plugin/theme
+msgid "oik-nivo-slider"
+msgstr "OIk-nvio-sidelr"
+
+#. Plugin URI of the plugin/theme
+msgid "http://www.oik-plugins.com/oik-plugins/oik-nivo-slider/"
+msgstr "http://www.oik-plugins.com/oik-plugins/oik-nivo-slider/"
+
+#. Description of the plugin/theme
+msgid "[nivo] shortcode for the Nivo slider using oik"
+msgstr "[nivo] sthdocroe fOr thE Nvio sledir unisg OIk"
+
+#. Author of the plugin/theme
+msgid "bobbingwide"
+msgstr "bdbgwoibnie"
+
+#. Author URI of the plugin/theme
+msgid "http://www.bobbingwide.com"
+msgstr "http://www.bobbingwide.com"
+
