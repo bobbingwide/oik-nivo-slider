@@ -379,12 +379,10 @@ function bw_format_nivo_attachment( $post, $atts ) {
   } else {
     $title = null;
   }   
-   
   $image = bw_get_attached_file_name( $post->ID, $atts );
-  bw_trace2( $image, "image" );
-  
+  bw_trace2( $image, "image", true, BW_TRACE_DEBUG );
   if ( $image ) {
-    $thumbnail = retimage( null, $image , $title, $alt, null, kv("data-thumb", $image) );
+    $thumbnail = retimage( null, $image , $title, null, null, kv("data-thumb", $image) );
 		if ( $atts['count'] ) {
 			$thumbnail = str_replace( "/>", ' style="display:none" />', $thumbnail );
 		}
