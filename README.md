@@ -4,7 +4,7 @@
 * Tags:  responsive, Nivo, slider, shortcode, [nivo], oik, jQuery, slideshow, posts, pages, attachments
 * Requires at least: 3.5
 * Tested up to: 4.5
-* Stable tag: 1.14.2
+* Stable tag: 1.14.3
 * License: GPLv2 or later
 * License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -267,6 +267,9 @@ YES. See [oik-nivo-slider](http://www.oik-plugins.com/oik-plugins/oik-nivo-slide
 12. oik Nivo slider options page
 
 ## Upgrade Notice 
+# 1.14.3 
+Contains a fix for Issue 4. Tested with WordPress 4.5. Now dependent on oik v3.0.0 or higher.
+
 # 1.14.2 
 Contains a fix for Issue 3. Tested with WordPress 4.5. Now dependent on oik v3.0.0 or higher.
 
@@ -328,6 +331,9 @@ Now depends on oik v2.4 or higher. Upgrade if you're using the Nivo v2.7.1 theme
 * first version works with oik version 1.11
 
 ## Changelog 
+# 1.14.3 
+* Fixed: Dependency checking issues when oik v2.4 is active [github bobbingwide oik-nivo-slider issue 4]
+
 # 1.14.2 
 * Fixed: nivo slider formatting issues when attachment titles contain HTML tags [github bobbingwide oik-nivo-slider issue 3]
 * Changed: Now reports dependency on oik v3.0.0 or higher
