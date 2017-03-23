@@ -1,10 +1,11 @@
 # oik-nivo-slider 
+![banner](https://raw.githubusercontent.com/bobbingwide/oik-nivo-slider/master/assets/oik-nivo-slider-banner-772x250.jpg)
 * Contributors: bobbingwide, vsgloik
-* Donate link: http://www.oik-plugins.com/oik/oik-donate/
-* Tags:  responsive, Nivo, slider, shortcode, [nivo], oik, jQuery, slideshow, posts, pages, attachments
-* Requires at least: 3.5
-* Tested up to: 4.5
-* Stable tag: 1.14.3
+* Donate link: https://www.oik-plugins.com/oik/oik-donate/
+* Tags:  [nivo], shortcode, slider, jQuery, oik
+* Requires at least: 3.9
+* Tested up to: 4.7.3
+* Stable tag: 1.14.4
 * License: GPLv2 or later
 * License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -35,7 +36,7 @@
 * Built in directional and control navigation
 * Thumbnail image navigation
 
-See also [dev 7 studios](http://nivo.dev7studios.com) for more information about the jQuery Nivo code.
+See also [Nivo Slider](https://github.com/Codeinwp/Nivo-Slider-jQuery) for more information about the jQuery Nivo code.
 
 # Features of the oik nivo slider WordPress plugin 
 
@@ -63,9 +64,9 @@ See also [dev 7 studios](http://nivo.dev7studios.com) for more information about
 * Note: oik-nivo-slider is dependent upon the oik plugin.
 You can activate it but it will not function correctly unless the pre-requisite version of oik is also activated.
 Download oik from
-[oik download](http://wordpress.org/extend/plugins/oik/)
+[oik download](https://wordpress.org/plugins/oik/)
 
-[Find out more](http://www.oik-plugins.com/oik-plugins/oik-nivo-slider/)
+[Find out more](https://www.oik-plugins.com/oik-plugins/oik-nivo-slider/)
 
 ## Installation 
 1. Upload the contents of the oik-nivo-slider plugin to the `/wp-content/plugins/oik-nivo-slider' directory
@@ -74,9 +75,18 @@ Download oik from
 
 * Note: oik-nivo-slider is dependent upon the oik plugin. You can activate it but it will not work unless oik is also activated.
 Download oik from
-[oik download](http://wordpress.org/extend/plugins/oik/)
+[oik download](https://wordpress.org/plugins/oik/)
 
 ## Frequently Asked Questions 
+# Installation 
+
+1. Upload the contents of the oik-nivo-slider plugin to the `/wp-content/plugins/oik-nivo-slider' directory
+1. Activate the oik-nivo-slider plugin through the 'Plugins' menu in WordPress
+1. Whenever you want to produce a Nivo slider use the [nivo] shortcode.
+
+* Note: oik-nivo-slider is dependent upon the oik plugin.
+You can activate it but it will not work unless oik is also activated.
+Download oik from [oik download](https://wordpress.org/plugins/oik/)
 
 # What is the simplest syntax for the [nivo] shortcode? 
 If you simply want to show all the attached images to a page, post or custom post type then use
@@ -230,8 +240,8 @@ Thumbnail navigation is supported from version 3.1 of the nivo jQuery code.
 YES... Use the effect= parameter e.g. [nivo effect=boxRain]
 
 # What's the difference between this plugin and Nivo's WordPress plugin 
-I have not tried Nivo's plugin. But you can read about it and watch a video here
-http://nivo.dev7studios.com/features/#wordpress
+I have not tried Nivo's plugin.
+
 
 # Does it support NextGEN galleries? 
 YES. Basic support for images in NextGEN galleries has been added in version 1.18
@@ -250,7 +260,7 @@ oik-nivo-slider has built in support for:
 * screenshot:plugin_name - display the screenshots for an installed plugin
 
 # Can you tell me more? 
-YES. See [oik-nivo-slider](http://www.oik-plugins.com/oik-plugins/oik-nivo-slider/)
+YES. See [oik-nivo-slider](https://www.oik-plugins.com/oik-plugins/oik-nivo-slider/)
 
 ## Screenshots 
 1. Nivo slider - default theme [nivo]
@@ -267,6 +277,9 @@ YES. See [oik-nivo-slider](http://www.oik-plugins.com/oik-plugins/oik-nivo-slide
 12. oik Nivo slider options page
 
 ## Upgrade Notice 
+# 1.14.4 
+Tested with WordPress 4.7.3 and WordPress Multisite. Tested with PHP 7.1
+
 # 1.14.3 
 Contains a fix for Issue 4. Tested with WordPress 4.5. Now dependent on oik v3.0.0 or higher.
 
@@ -331,11 +344,18 @@ Now depends on oik v2.4 or higher. Upgrade if you're using the Nivo v2.7.1 theme
 * first version works with oik version 1.11
 
 ## Changelog 
+# 1.14.4 
+* Tested: With WordPress 4.7.3 and WordPress Multisite
+* Tested: With PHP 7.1 https://github.com/bobbingwide/oik-nivo-slider/issues/5
+* Tested: With https protocol
+* Changed: Docblocks
+* Changed: Updated readme
+
 # 1.14.3 
-* Fixed: Dependency checking issues when oik v2.4 is active [github bobbingwide oik-nivo-slider issue 4]
+* Fixed: Dependency checking issues when oik v2.4 is active https://github.com/bobbingwide/oik-nivo-slider/issues/4
 
 # 1.14.2 
-* Fixed: nivo slider formatting issues when attachment titles contain HTML tags [github bobbingwide oik-nivo-slider issue 3]
+* Fixed: nivo slider formatting issues when attachment titles contain HTML tags https://github.com/bobbingwide/oik-nivo-slider/issues/3
 * Changed: Now reports dependency on oik v3.0.0 or higher
 * Tested: With WordPress 4.5 and WordPress MultiSite
 
@@ -447,6 +467,6 @@ Now depends on oik v2.4 or higher. Upgrade if you're using the Nivo v2.7.1 theme
 
 ## Further reading 
 If you want to read more about the oik plugins then please visit the
-[oik plugin](http://www.oik-plugins.com/oik)
+[oik plugin](https://www.oik-plugins.com/oik)
 **"the oik plugin - for often included key-information"**
 

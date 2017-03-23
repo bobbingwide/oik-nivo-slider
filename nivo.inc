@@ -3,16 +3,17 @@
 /**
  * Format the Nivo output for posts which have attached images 
  * 
- * When the thumbnail size is "full" then this will only work when there is an attached image
- * It won't find the featured image. This is a limitation of bw_thumbnail() **?**
+ * When the thumbnail size is "full" then this will only work when there is an attached image.
+ * It won't find the featured image. This is a limitation of bw_thumbnail().
  *
- * Note: This routine only supports link=y or link=n.  It doesn't support link=file nor link=full 
+ * Note: This routine only supports link=y or link=n.  
+ *
+ * It doesn't support link=file nor link=full 
  * as it's intended for creating links to the particular post not to the attached image.
  *
  * @param post $post - a post object
  * @param array $atts - array of shortcode parameters 
- * 
-*/
+ */
 function bw_format_nivo( $post, $atts ) {
   $alt = null;
   if ( bw_validate_torf( $atts['caption'] ) ) {
@@ -38,11 +39,6 @@ function bw_format_nivo( $post, $atts ) {
 
 /**
  * Determine if now is closer to wanted than the best so far
- * 
- * @param integer $wanted - the exact value we want to match
- * @param integer $best - the best value so far
- * @param integer $now - the current value
- * @return integer $result - one of the following
  *
  * 9 = perfect - this is the exact value
  * 3 = better - the new value is better than best so far
@@ -54,25 +50,30 @@ function bw_format_nivo( $post, $atts ) {
  * 
  * In the table below: z > y > x > w > 0
  *
- * $best $now     result
- * ----- -----    ------------
- * 0     w/y/z    2 = it's a start
- * 0     x        9 = perfect
- * w     w        1 = same
- * w     x        9 = perfect
- * w     y/z      3 = better
- * x     w        0 = worse         
- * x     x        9 = perfect       
- * x     y/z      0 = worse
- * y     w        0 = worse
- * y     x        9 = perfect
- * y     y        1 = same
- * y     z        0 = worse
- * z     w        0 = worse
- * z     x        9 = perfect
- * z     y        3 = better
- * z     z        1 = same
+ * $best | $now   |  result
+ * ----- | -----  |  ------------
+ * 0     | w/y/z  |  2 = it's a start
+ * 0     | x      |  9 = perfect
+ * w     | w      |  1 = same
+ * w     | x      |  9 = perfect
+ * w     | y/z    |  3 = better
+ * x     | w      |  0 = worse         
+ * x     | x      |  9 = perfect       
+ * x     | y/z    |  0 = worse
+ * y     | w      |  0 = worse
+ * y     | x      |  9 = perfect
+ * y     | y      |  1 = same
+ * y     | z      |  0 = worse
+ * z     | w      |  0 = worse
+ * z     | x      |  9 = perfect
+ * z     | y      |  3 = better
+ * z     | z      |  1 = same
+ *
  * 
+ * @param integer $wanted - the exact value we want to match
+ * @param integer $best - the best value so far
+ * @param integer $now - the current value
+ * @return integer $result - one of the above
  */
 function bw_closer( $wanted, $best, $now ) {
   if ( $wanted == $best  ) {
@@ -101,6 +102,7 @@ function bw_closer( $wanted, $best, $now ) {
  * Determine if this size is a better match than before? 
  * 
  * Note: Best width and height start at 0
+ * 
  * @param integer $sw - required width
  * @param integer $sh - required height
  * @param integer $best_width - best width so far
@@ -120,18 +122,15 @@ function bw_better_fit( $sw, $sh, $best_width, $best_height, $width, $height, $b
     $result = $score;
   else
     $result = 0;
-  bw_trace2( $score );
+  bw_trace2( $score, "score", true, BW_TRACE_VERBOSE );
   return( $result );    
 }
 
 /**
  * Find the best fitting file for the chosen size 
  *
- * @param array - array of files and their sizes
- * @param array - size array - size[0]= width, size[1] = height 
- * @return string chose file name or 
  * Choose the best fitting image from the available selection
- 
+ * `
             [sizes] => Array
                 (
                     [thumbnail] => Array
@@ -150,10 +149,14 @@ function bw_better_fit( $sw, $sh, $best_width, $best_height, $width, $height, $b
                     [full] => Array built from the information for the full size file    
 
                 )
- * 
+ * `
  * Note: Since we're not going to scale the file then we just try to find something that's a reasonable size.
- * We ignore the aspect ratio
+ * We ignore the aspect ratio.
  *
+ *
+ * @param array - array of files and their sizes
+ * @param array - size array - size[0]= width, size[1] = height 
+ * @return string chose file name or 
  */
 function bw_get_by_size( $sizes, $size ) {
   $sw = $size[0];
@@ -181,11 +184,11 @@ function bw_get_by_size( $sizes, $size ) {
     }
     
   }
-  bw_trace2( $best_file, "best file now", false );  
+  bw_trace2( $best_file, "best file now", false, BW_TRACE_DEBUG );  
   if ( !$best_file ) {
     $best_file = $file;
   }  
-  bw_trace2( $best_file, "I chose" );
+  bw_trace2( $best_file, "I chose", true, BW_TRACE_DEBUG );
   return( $best_file );
 }
 
@@ -241,13 +244,10 @@ function bw_get_best_fit( $post_id, $size ) {
 /** 
  * Return the 'correct' URL for the attached image
  *
- * @param integer $post_id - the ID of the attachment post
- * @param array $atts - attributes containing the specified thumbnail size.
- * @return string $image - the URL for the attached image
- *
  * We cannot rely on $post->guid since the uploaded file may have been edited in the media dialog and given a new name. 
  * We need to obtain the file name from the metadata and then fully qualify it for the browser
 
+ * `
     [0] => Array
         (
             [width] => 350
@@ -287,13 +287,17 @@ function bw_get_best_fit( $post_id, $size ) {
                 )
 
         )
-        
+ * `
+ *        
  * When the file is "thumbnail", "medium" or "large" - or any other combination then we need to add the directory information
- * from the "file" to the selected file
+ * from the "file" to the selected file.
  * When the thumbnail parameter is a numeric [size] array we need to search the [sizes] array
  * to try to find the best match for the specified size.
- *
-*/ 
+ * 
+ * @param integer $post_id - the ID of the attachment post
+ * @param array $atts - attributes containing the specified thumbnail size.
+ * @return string $image - the URL for the attached image
+ */ 
 function bw_get_attached_file_name( $post_id, $atts ) {
   $size = bw_array_get( $atts, "thumbnail", "full" );
   bw_trace2( $size, "size" );
@@ -435,8 +439,8 @@ function bw_get_special_post_type( $atts ) {
  * It does not load the files from the wordpress.org repository - where they may be stored in the assets folder
  * 
  * @param array $atts - array of shortcode parameters
- *
-*/    
+ * @return array 
+ */    
 function bw_get_spt_screenshot( $atts ) { 
   $explode = explode( ':', $atts['post_type'] );
   $type = bw_array_get( $explode, 0, "screenshot" );
@@ -491,15 +495,11 @@ function bw_format_nivo_screenshot( $fileurl, $atts ) {
 
 /**
  * Format a NextGEN gallery image for the nivo slider
- *
- * @param object $nggImage - a NextGEN gallery nggImage object
- * @param array $atts - array of shortcode parameters
- *
+ * 
  * The nggImage object already contains the fields we need in order to display an image: imageURL and description
  * Don't yet know the requirements for using other data. So currently just display without any links
  *
- * 
- 
+ * `
     [14] => nggImage Object
         (
             [errmsg] => 
@@ -573,7 +573,11 @@ function bw_format_nivo_screenshot( $fileurl, $atts ) {
 </a>
 
         )
-
+ * `				
+ *
+ * @param object $nggImage - a NextGEN gallery nggImage object
+ * @param array $atts - array of shortcode parameters
+ *
  */
 function bw_format_nivo_nggallery( $nggImage, $atts ) {
   if ( bw_validate_torf( $atts['caption'] ) ) {

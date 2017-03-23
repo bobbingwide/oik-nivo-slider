@@ -1,4 +1,4 @@
-<?php // (C) Copyright Bobbing Wide 201
+<?php // (C) Copyright Bobbing Wide 2017
 
 /**
  * @package oik-nivo-slider
@@ -39,7 +39,7 @@ class Tests_nivo_inc extends BW_UnitTestCase {
 		 
 		nivo__example();
 		$actual = bw_ret();
-		$this->assertContains( $expected, $actual, "In progress" );
+		$this->assertContains( $expected, $actual );
 		
 	}
 	
@@ -59,10 +59,24 @@ class Tests_nivo_inc extends BW_UnitTestCase {
 		$this->assertContains( 'screenshot-2.jpg"  style="display:none" />', $actual );
 	}
 	
-	
+	/**
+	 * Currently there are 12 screenshots
+	 */
 	function test_bw_get_spt_screenshot() {
 		$urls = bw_get_spt_screenshot( ['post_type' => 'screenshot:oik-nivo-slider' ] );
 		$this->assertCount( 12, $urls );
+		//print_r( $urls );
+	}
+	
+	/**
+	 * Test support for HTTPS protocol
+	 */
+	function test_no_http_in_output() {
+		$_SERVER['HTTPS'] = 'on';
+		nivo__example();
+		$actual = bw_ret();
+		$this->assertContains( "https://", $actual );
+		$this->assertNotContains( "http://", $actual );
 	}
 	
 
