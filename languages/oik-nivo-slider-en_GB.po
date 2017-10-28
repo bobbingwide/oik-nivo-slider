@@ -7,7 +7,7 @@ msgstr ""
 "POT-Creation-Date: 2017-10-28 08:25:24+00:00\n"
 "MIME-Version: 1.0\n"
 "Plural-Forms: nplurals=2; plural=n == 1 ? 0 : 1;\n"
-"Language: bb_BB\n"
+"Language: en_GB\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
@@ -15,179 +15,142 @@ msgstr ""
 "Language-Team: LANGUAGE <LL@li.org>\n"
 #: admin/oik-activation.php:24
 msgid "Install"
-msgstr "Isnatll"
-
+msgstr "Install"
 
 #: admin/oik-activation.php:53
 msgid "Activate"
-msgstr "Atcvitae"
-
+msgstr "Activate"
 
 #: admin/oik-activation.php:73
 msgid "Update"
-msgstr "Udptae"
-
+msgstr "Update"
 
 #: admin/oik-activation.php:191
 msgid "%1$s may not be fully functional."
-msgstr "%1$s mAy nOt bE fluly fnutcoianl."
-
+msgstr "%1$s may not be fully functional."
 
 #: admin/oik-activation.php:193
 msgid ""
 "Please install and activate the required minimum version of this plugin:"
-msgstr ""
-"Pelsae isnatll And atcvitae thE rqeiuerd mnimium vreison Of tihs pulign:"
-
+msgstr "Please install and activate the required minimum version of this plugin:"
 
 #: admin/oik-nivo-slider.php:15
 msgid "Nivo slider options"
-msgstr "Nvio siledr otpoins"
-
+msgstr "Nivo slider options"
 
 #: admin/oik-nivo-slider.php:16
 msgid "Default slider options"
-msgstr "Dfeualt siledr otpoins"
-
+msgstr "Default slider options"
 
 #: admin/oik-nivo-slider.php:19
 msgid "Usage notes"
-msgstr "Uasge ntoes"
-
+msgstr "Usage notes"
 
 #: admin/oik-nivo-slider.php:69
 msgid "Effect (effect=<i>effect</i>)"
-msgstr "Effcet (effect=<i>effect</i>)"
-
+msgstr "Effect (effect=<i>effect</i>)"
 
 #: admin/oik-nivo-slider.php:71
 msgid "Slices"
-msgstr "Silecs"
-
+msgstr "Slices"
 
 #: admin/oik-nivo-slider.php:72
 msgid "Box cols"
-msgstr "BOx clos"
-
+msgstr "Box cols"
 
 #: admin/oik-nivo-slider.php:73
 msgid "Box rows"
-msgstr "BOx rwos"
-
+msgstr "Box rows"
 
 #: admin/oik-nivo-slider.php:74
 msgid "Anim speed"
-msgstr "Ainm seped"
-
+msgstr "Anim speed"
 
 #: admin/oik-nivo-slider.php:75
 msgid "Pause time (pause=<i>nnnn</i>)"
-msgstr "Puase tmie (pause=<i>nnnn</i>)"
-
+msgstr "Pause time (pause=<i>nnnn</i>)"
 
 #: admin/oik-nivo-slider.php:86
 msgid "Caption opacity"
-msgstr "Cpaiton oapicty"
-
+msgstr "Caption opacity"
 
 #: admin/oik-nivo-slider.php:91
 msgid "Save changes"
-msgstr "Svae cahgnes"
-
+msgstr "Save changes"
 
 #: admin/oik-nivo-slider.php:101
 msgid ""
 "These options for the jQuery Nivo slider control the default behaviour for "
 "each instance of the slider."
-msgstr ""
-"Tehse otpoins fOr thE juQrey Nvio siledr cnortol thE dfeualt bhevaoiur fOr "
-"ecah isnatcne Of thE siledr."
-
+msgstr "These options for the jQuery Nivo slider control the default behaviour for each instance of the slider."
 
 #: nivo.inc:769
 msgid "image size"
-msgstr "iamge szie"
-
+msgstr "image size"
 
 #: nivo.inc:778
 msgid "Post type to display"
-msgstr "Psot tpye tO dsilpay"
-
+msgstr "Post type to display"
 
 #: nivo.inc:779
 msgid "Theme for the slideshow"
-msgstr "Tehme fOr thE siledhsow"
-
+msgstr "Theme for the slideshow"
 
 #: nivo.inc:780
 msgid "CSS classes"
-msgstr "CSS calsses"
-
+msgstr "CSS classes"
 
 #: nivo.inc:781
 msgid "Link the images to the target post/page or media file"
-msgstr "Lnik thE iamegs tO thE traegt psot/pgae Or mdeia flie"
-
+msgstr "Link the images to the target post/page or media file"
 
 #: nivo.inc:782
 msgid "Display the image title as the caption"
-msgstr "Dsilpay thE iamge ttile As thE cpaiton"
-
+msgstr "Display the image title as the caption"
 
 #: nivo.inc:783
 msgid "field format string"
-msgstr "feild froamt srtnig"
-
+msgstr "field format string"
 
 #: nivo.inc:784
 msgid "Display the ribbon, if the theme supports it"
-msgstr "Dsilpay thE rbiobn, If thE tehme spuoptrs It"
-
+msgstr "Display the ribbon, if the theme supports it"
 
 #: nivo.inc:787
 msgid "Thumbnail navigation"
-msgstr "Tuhbmanil nvagitaoin"
-
+msgstr "Thumbnail navigation"
 
 #: nivo.inc:788
 msgid "Control navigation"
-msgstr "Cnortol nvagitaoin"
-
+msgstr "Control navigation"
 
 #: nivo.inc:789
 msgid "Pause time in milli seconds"
-msgstr "Puase tmie In mlili scenods"
-
+msgstr "Pause time in milli seconds"
 
 #: nivo.inc:790
 msgid "Manual advance"
-msgstr "Mnaaul avdnace"
-
+msgstr "Manual advance"
 
 #: nivo.inc:791
 msgid "transition effect"
-msgstr "tarsntioin effcet"
-
+msgstr "transition effect"
 
 #. Plugin Name of the plugin/theme
 msgid "oik-nivo-slider"
-msgstr "OIk-nvio-siledr"
-
+msgstr "oik-nivo-slider"
 
 #. Plugin URI of the plugin/theme
 msgid "https://www.oik-plugins.com/oik-plugins/oik-nivo-slider/"
 msgstr "https://www.oik-plugins.com/oik-plugins/oik-nivo-slider/"
 
-
 #. Description of the plugin/theme
 msgid "[nivo] shortcode for the Nivo slider using oik"
-msgstr "[nivo] sohtrocde fOr thE Nvio siledr uisng OIk"
-
+msgstr "[nivo] shortcode for the Nivo slider using oik"
 
 #. Author of the plugin/theme
 msgid "bobbingwide"
-msgstr "bboibgniwde"
-
+msgstr "bobbingwide"
 
 #. Author URI of the plugin/theme
 msgid "https://www.oik-plugins.com/author/bobbingwide"

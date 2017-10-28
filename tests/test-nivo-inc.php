@@ -13,7 +13,35 @@ class Tests_nivo_inc extends BW_UnitTestCase {
 		parent::setUp();
 		oik_require( "nivo.inc", "oik-nivo-slider" );
 		oik_require_lib( "oik-sc-help" );
+	}
+	
+	/**
+	 * Tests set_url_scheme returns https:
+	 *
+	 * Test added for oik v3.2.0-RC1. Shortcode expansion now returns the saved HTML
+	 * when the shortcode is unchanged. So the scheme will not change due to changing the 
+	 * value of $_SERVER['HTTPS']. To test this properly we'll have to 
+	 * the same 
+	 */	
+	function test_is_ssl() { 		
+		$_SERVER['HTTPS'] = 'on';
+		$https = bw_array_get( $_SERVER, 'HTTPS', null );
+		$this->assertEquals( "on", $https );
+		
+		$secure = is_ssl();
+		$this->assertTrue( $secure );
+		$url = WP_PLUGIN_URL;
+		//echo $url;
+		
+		$url = set_url_scheme( $url );
+		//echo $url;
+		
+		$this->assertContains( "https://", $url );
+		
+		
 	}	
+	
+	
 	
 
 	/**
@@ -31,6 +59,8 @@ class Tests_nivo_inc extends BW_UnitTestCase {
 	 * 
 	 */
 	function test_nivo__example() {
+	
+		$_SERVER['HTTPS'] = null;
 		$expected = '<div class="slider-wrapper theme-oik">';
 		$expected .= "\n";
 		$expected .= '<div class="ribbon"></div>';
@@ -73,11 +103,15 @@ class Tests_nivo_inc extends BW_UnitTestCase {
 	 */
 	function test_no_http_in_output() {
 		$_SERVER['HTTPS'] = 'on';
+		bw_expand_shortcode();
 		nivo__example();
 		$actual = bw_ret();
+		//echo $actual;
 		$this->assertContains( "https://", $actual );
 		$this->assertNotContains( "http://", $actual );
 	}
+	
+	
 	
 
 }

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="" tests="5" assertions="9" errors="0" failures="0" skipped="0" time="2.530649">
+    <testsuite name="Tests_nivo_inc" file="C:\apache\htdocs\wordpress\wp-content\plugins\oik-nivo-slider\tests\test-nivo-inc.php" tests="5" assertions="9" errors="0" failures="0" skipped="0" time="2.530649">
+      <testcase name="test_is_ssl" class="Tests_nivo_inc" classname="Tests_nivo_inc" file="C:\apache\htdocs\wordpress\wp-content\plugins\oik-nivo-slider\tests\test-nivo-inc.php" line="26" assertions="3" time="2.159772"/>
+      <testcase name="test_nivo__example" class="Tests_nivo_inc" classname="Tests_nivo_inc" file="C:\apache\htdocs\wordpress\wp-content\plugins\oik-nivo-slider\tests\test-nivo-inc.php" line="61" assertions="1" time="0.162926"/>
+      <testcase name="test_issue_3_image_2_onwards_has_display_none" class="Tests_nivo_inc" classname="Tests_nivo_inc" file="C:\apache\htdocs\wordpress\wp-content\plugins\oik-nivo-slider\tests\test-nivo-inc.php" line="82" assertions="2" time="0.061415"/>
+      <testcase name="test_bw_get_spt_screenshot" class="Tests_nivo_inc" classname="Tests_nivo_inc" file="C:\apache\htdocs\wordpress\wp-content\plugins\oik-nivo-slider\tests\test-nivo-inc.php" line="95" assertions="1" time="0.021769"/>
+      <testcase name="test_no_http_in_output" class="Tests_nivo_inc" classname="Tests_nivo_inc" file="C:\apache\htdocs\wordpress\wp-content\plugins\oik-nivo-slider\tests\test-nivo-inc.php" line="104" assertions="2" time="0.124767"/>
+    </testsuite>
+  </testsuite>
+</testsuites>
