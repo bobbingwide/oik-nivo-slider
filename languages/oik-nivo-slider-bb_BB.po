@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: oik-nivo-slider 1.15.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/oik-nivo-slider\n"
-"POT-Creation-Date: 2017-10-29 15:48:30+00:00\n"
+"POT-Creation-Date: 2017-11-06 21:12:02+00:00\n"
 "MIME-Version: 1.0\n"
 "Plural-Forms: nplurals=2; plural=n == 1 ? 0 : 1;\n"
 "Language: bb_BB\n"
@@ -66,8 +66,13 @@ msgstr "Uasge ntoes"
 
 
 #: admin/oik-nivo-slider.php:69
-msgid "Effect (effect=<i>effect</i>)"
-msgstr "Effcet (effect=<i>effect</i>)"
+msgid "Effect"
+msgstr "Effcet"
+
+
+#: admin/oik-nivo-slider.php:69
+msgid "effect"
+msgstr "effcet"
 
 
 #: admin/oik-nivo-slider.php:71
@@ -91,21 +96,51 @@ msgstr "Ainm seped"
 
 
 #: admin/oik-nivo-slider.php:75
-msgid "Pause time (pause=<i>nnnn</i>)"
-msgstr "Puase tmie (pause=<i>nnnn</i>)"
+msgid "Pause time"
+msgstr "Puase tmie"
 
 
-#: admin/oik-nivo-slider.php:86
+#: admin/oik-nivo-slider.php:77
+msgid "Control nav"
+msgstr "Cnortol nAv"
+
+
+#: admin/oik-nivo-slider.php:78
+msgid "Control nav thumbs"
+msgstr "Cnortol nAv tuhbms"
+
+
+#: admin/oik-nivo-slider.php:79
+msgid "Direction nav"
+msgstr "Driceiton nAv"
+
+
+#: admin/oik-nivo-slider.php:80
+msgid "Direction nav hide"
+msgstr "Driceiton nAv hdie"
+
+
+#: admin/oik-nivo-slider.php:81
+msgid "Pause on hover"
+msgstr "Puase On hvoer"
+
+
+#: admin/oik-nivo-slider.php:82 nivo.inc:790
+msgid "Manual advance"
+msgstr "Mnaaul avdnace"
+
+
+#: admin/oik-nivo-slider.php:84
 msgid "Caption opacity"
 msgstr "Cpaiton oapicty"
 
 
-#: admin/oik-nivo-slider.php:91
+#: admin/oik-nivo-slider.php:87
 msgid "Save changes"
 msgstr "Svae cahgnes"
 
 
-#: admin/oik-nivo-slider.php:101
+#: admin/oik-nivo-slider.php:97
 msgid ""
 "These options for the jQuery Nivo slider control the default behaviour for "
 "each instance of the slider."
@@ -169,14 +204,18 @@ msgid "Pause time in milli seconds"
 msgstr "Puase tmie In mlili scenods"
 
 
-#: nivo.inc:790
-msgid "Manual advance"
-msgstr "Mnaaul avdnace"
-
-
 #: nivo.inc:791
 msgid "transition effect"
 msgstr "tarsntioin effcet"
+
+
+#: nivo.inc:806
+msgid ""
+"Slideshow of the screenshots from oik-nivo-slider, using the oik theme and "
+"the current settings."
+msgstr ""
+"Siledhsow Of thE srceesnohts form OIk-nvio-siledr, uisng thE OIk tehme And "
+"thE cruernt steitgns."
 
 
 #. Plugin Name of the plugin/theme

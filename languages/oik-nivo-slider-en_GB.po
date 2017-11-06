@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: oik-nivo-slider 1.15.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/oik-nivo-slider\n"
-"POT-Creation-Date: 2017-10-29 15:48:30+00:00\n"
+"POT-Creation-Date: 2017-11-06 21:12:02+00:00\n"
 "MIME-Version: 1.0\n"
 "Plural-Forms: nplurals=2; plural=n == 1 ? 0 : 1;\n"
 "Language: en_GB\n"
@@ -55,8 +55,12 @@ msgid "Usage notes"
 msgstr "Usage notes"
 
 #: admin/oik-nivo-slider.php:69
-msgid "Effect (effect=<i>effect</i>)"
-msgstr "Effect (effect=<i>effect</i>)"
+msgid "Effect"
+msgstr "Effect"
+
+#: admin/oik-nivo-slider.php:69
+msgid "effect"
+msgstr "effect"
 
 #: admin/oik-nivo-slider.php:71
 msgid "Slices"
@@ -75,18 +79,42 @@ msgid "Anim speed"
 msgstr "Anim speed"
 
 #: admin/oik-nivo-slider.php:75
-msgid "Pause time (pause=<i>nnnn</i>)"
-msgstr "Pause time (pause=<i>nnnn</i>)"
+msgid "Pause time"
+msgstr "Pause time"
 
-#: admin/oik-nivo-slider.php:86
+#: admin/oik-nivo-slider.php:77
+msgid "Control nav"
+msgstr "Control nav"
+
+#: admin/oik-nivo-slider.php:78
+msgid "Control nav thumbs"
+msgstr "Control nav thumbs"
+
+#: admin/oik-nivo-slider.php:79
+msgid "Direction nav"
+msgstr "Direction nav"
+
+#: admin/oik-nivo-slider.php:80
+msgid "Direction nav hide"
+msgstr "Direction nav hide"
+
+#: admin/oik-nivo-slider.php:81
+msgid "Pause on hover"
+msgstr "Pause on hover"
+
+#: admin/oik-nivo-slider.php:82 nivo.inc:790
+msgid "Manual advance"
+msgstr "Manual advance"
+
+#: admin/oik-nivo-slider.php:84
 msgid "Caption opacity"
 msgstr "Caption opacity"
 
-#: admin/oik-nivo-slider.php:91
+#: admin/oik-nivo-slider.php:87
 msgid "Save changes"
 msgstr "Save changes"
 
-#: admin/oik-nivo-slider.php:101
+#: admin/oik-nivo-slider.php:97
 msgid ""
 "These options for the jQuery Nivo slider control the default behaviour for "
 "each instance of the slider."
@@ -136,13 +164,15 @@ msgstr "Control navigation"
 msgid "Pause time in milli seconds"
 msgstr "Pause time in milli seconds"
 
-#: nivo.inc:790
-msgid "Manual advance"
-msgstr "Manual advance"
-
 #: nivo.inc:791
 msgid "transition effect"
 msgstr "transition effect"
+
+#: nivo.inc:806
+msgid ""
+"Slideshow of the screenshots from oik-nivo-slider, using the oik theme and "
+"the current settings."
+msgstr "Slideshow of the screenshots from oik-nivo-slider, using the oik theme and the current settings."
 
 #. Plugin Name of the plugin/theme
 msgid "oik-nivo-slider"

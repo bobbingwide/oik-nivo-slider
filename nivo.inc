@@ -803,7 +803,7 @@ function nivo__syntax( $shortcode='nivo' ) {
  */ 
 function nivo__example( $shortcode='nivo' ) {
   $atts = 'theme=oik post_type="screenshot:oik-nivo-slider" caption=n link=n';
-  $text = "Slideshow of the screenshots from oik-nivo-slider, using the oik theme and the current settings. ";
+  $text = __( "Slideshow of the screenshots from oik-nivo-slider, using the oik theme and the current settings.", "oik-nivo-slider" );
   bw_invoke_shortcode( $shortcode, $atts, $text  );
   sediv("clear");
 }

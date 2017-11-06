@@ -51,13 +51,11 @@ class Tests_admin_oik_nivo_slider extends BW_UnitTestCase {
 	 * Just in time translation only works for plugins delivered from wordpress.org
 	 * or plugins that deliver their .mo files to languages/plugins
 	 *
-	 * This is because
-get_translations_for_domain 
-	calls  _load_textdomain_just_in_time( $domain ) 
-		calls _get_path_to_translation( $domain );
-			calls _get_path_to_translation_from_lang_dir
-			which only looks
-	 * 
+	 * This is because get_translations_for_domain 
+	 * calls  _load_textdomain_just_in_time( $domain ) 
+	 * calls _get_path_to_translation( $domain );
+	 * calls _get_path_to_translation_from_lang_dir
+	 * which only looks in languages/plugins.
 	 * 
 	 * languages/plugins | plugin/languages |	File loaded?
 	 * ----------------- | ---------------- | ------------- 
@@ -67,12 +65,11 @@ get_translations_for_domain
 	 * domain-la_CY.a    | domain-la_CY.b  	| .a 	 
 	 *
 	 * Consider .mo files under wp-content where  .a and .b indicate different versions of the .mo file
-	 * The files under languages/plugins are the ones managed by wordpress.org
-	 * The files in the languages directory for the plugin are delivered by the plugin.
-	 * For the .b file to be loaded from plugin/languages we need to call bw_load_plugin_textdomain
-	 * true or false? 
-			
-
+	 * - The files under languages/plugins are the ones managed by wordpress.org
+	 * - The files in the languages directory for the plugin are delivered by the plugin.
+	 * - For the .b file to be loaded from plugin/languages we need to 
+	 * - ensure the files are not in languages/plugins and to call bw_load_plugin_textdomain
+	 * - We achieve half of this by overriding the reload_domains method
 	 */
 	function test_translate_bb_BB() {
 		$this->switch_to_locale( 'bb_BB' );
@@ -107,12 +104,11 @@ get_translations_for_domain
 		//print_r( $GLOBALS['submenu'] );
 	}
 	
-	
 	/**
 	 * Reloads the text domains
 	 * 
 	 * - Loading the 'oik-libs' text domain from the oik-libs plugin invalidates tests where the plugin is delivered from WordPress.org so oik-libs won't exist.
-	 * - but we do need to reload oik's text domain 
+	 * - but we do need to reload oik's and oik-nivo-slider's text domains
 	 * - and cause the null domain to be rebuilt.
 	 */
 	function reload_domains() {
@@ -128,10 +124,11 @@ get_translations_for_domain
 	/**
 	 * Tests oik_nivo_options_do_page
 	 * which assumes admin/oik-nivo-slider.php has been loaded
+	 *
+	 * Note: For environment dependence we'll need to update the settings.
 	 */
-	
 	function test_oik_nivo_options_do_page() {
-		$this->setExpectedDeprecated( "bw_translate" );
+		$this->switch_to_locale( 'en_GB' );
 		ob_start(); 
 		oik_nivo_options_do_page();
 		$html = ob_get_contents();
@@ -141,10 +138,33 @@ get_translations_for_domain
 		$html = $this->replace_home_url( $html );
 		$html_array = $this->tag_break( $html );
 		$this->assertNotNull( $html_array );
-		// @TODO Implement nonce checking in oik_lazy_plugins_server_settings
+		$html_array = $this->replace_nonce_with_nonsense( $html_array );
 		$html_array = $this->replace_nonce_with_nonsense( $html_array, "closedpostboxesnonce", "closedpostboxesnonce" );
 		//$this->generate_expected_file( $html_array );
 		$this->assertArrayEqualsFile( $html_array );
+	}
+	
+	
+	/**
+	 * Tests oik_nivo_options_do_page
+	 * which assumes admin/oik-nivo-slider.php has been loaded
+	 */
+	function test_oik_nivo_options_do_page_bb_BB() {
+		$this->switch_to_locale( 'bb_BB' );
+		ob_start(); 
+		oik_nivo_options_do_page();
+		$html = ob_get_contents();
+		ob_end_clean();
+		$this->assertNotNull( $html );
+		$html = $this->replace_admin_url( $html );
+		$html = $this->replace_home_url( $html );
+		$html_array = $this->tag_break( $html );
+		$this->assertNotNull( $html_array );
+		$html_array = $this->replace_nonce_with_nonsense( $html_array );
+		$html_array = $this->replace_nonce_with_nonsense( $html_array, "closedpostboxesnonce", "closedpostboxesnonce" );
+		//$this->generate_expected_file( $html_array );
+		$this->assertArrayEqualsFile( $html_array );
+		$this->switch_to_locale( 'en_GB' );
 	}
 	
 	

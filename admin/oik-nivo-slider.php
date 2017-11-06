@@ -12,11 +12,11 @@ function oik_nivo_lazy_admin_menu() {
  * Nivo slider settings page
  */
 function oik_nivo_options_do_page() {
-  oik_menu_header( "Nivo slider options", "w50pc" );
-  oik_box( NULL, NULL, "Default slider options", "oik_nivo_slider_options" );
+  BW_::oik_menu_header( __( "Nivo slider options", "oik-nivo-slider" ), "w50pc" );
+  BW_::oik_box( NULL, NULL, __( "Default slider options", "oik-nivo-slider" ), "oik_nivo_slider_options" );
   ecolumn();
   scolumn( "w50pc" );
-  oik_box( NULL, NULL, "Usage notes", "oik_nivo_slider_usage" );
+  BW_::oik_box( NULL, NULL, __( "Usage notes", "oik-nivo-slider" ), "oik_nivo_slider_usage" );
   oik_menu_footer();
   bw_flush();
 }
@@ -66,29 +66,25 @@ function oik_nivo_slider_options() {
                 'boxRandom','boxRain','boxRainReverse','boxRainGrow','boxRainGrowReverse', 'slideInLeft', 'slideInRight' );
   $effect_options_assoc = bw_assoc( $effect_options );                
                 
-  bw_select_arr( $option, "Effect (effect=<i>effect</i>)", $options, 'effect', array( "#options" => $effect_options_assoc ) );
+  BW_::bw_select_arr( $option, __( "Effect", "oik-nivo-slider" ) . ' (effect=<i>' . __( "effect", "oik-nivo-slider" ) . '</i>)', $options, 'effect', array( "#options" => $effect_options_assoc ) );
   
-  bw_textfield_arr( $option, "Slices", $options, 'slices', 2 );
-  bw_textfield_arr( $option, "Box cols", $options, 'boxCols', 2 );
-  bw_textfield_arr( $option, "Box rows", $options, 'boxRows', 2 );
-  bw_textfield_arr( $option, "Anim speed", $options, 'animSpeed', 4 );
-  bw_textfield_arr( $option, "Pause time (pause=<i>nnnn</i>)", $options, 'pauseTime', 4 );
+  BW_::bw_textfield_arr( $option, __( "Slices", "oik-nivo-slider" ), $options, 'slices', 2 );
+  BW_::bw_textfield_arr( $option, __( "Box cols", "oik-nivo-slider" ), $options, 'boxCols', 2 );
+  BW_::bw_textfield_arr( $option, __( "Box rows", "oik-nivo-slider" ), $options, 'boxRows', 2 );
+  BW_::bw_textfield_arr( $option, __( "Anim speed", "oik-nivo-slider" ), $options, 'animSpeed', 4 );
+  BW_::bw_textfield_arr( $option, __( "Pause time", "oik-nivo-slider" ) . ' (pause=<i>nnnn</i>)', $options, 'pauseTime', 4 );
   
-  bw_checkbox_arr( $option, "Control nav (nav=n|y)", $options, 'controlNav' );
-  bw_checkbox_arr( $option, "Control nav thumbs (thumbs=n|y)", $options, 'controlNavThumbs' );
-  //bw_textfield_arr( $option, "Control nav thumbs search", $options, 'controlNavThumbsSearch', 20 );
-  //bw_textfield_arr( $option, "Control nav thumbs replace", $options, 'controlNavThumbsReplace', 20 );
-  bw_checkbox_arr( $option, "Direction nav", $options, 'directionNav' );
-  bw_checkbox_arr( $option, "Direction nav hide", $options, 'directionNavHide' );
-  bw_checkbox_arr( $option, "Pause on hover", $options, 'pauseOnHover' );
-  bw_checkbox_arr( $option, "Manual advance (manual=n|y)", $options, 'manualAdvance' );
+  bw_checkbox_arr( $option, __( "Control nav", "oik-nivo-slider" ) . ' (nav=n|y)', $options, 'controlNav' );
+  bw_checkbox_arr( $option, __( "Control nav thumbs", "oik-nivo-slider" ) . ' (thumbs=n|y)', $options, 'controlNavThumbs' );
+  bw_checkbox_arr( $option, __( "Direction nav", "oik-nivo-slider" ), $options, 'directionNav' );
+  bw_checkbox_arr( $option, __( "Direction nav hide", "oik-nivo-slider" ), $options, 'directionNavHide' );
+  bw_checkbox_arr( $option, __( "Pause on hover", "oik-nivo-slider" ), $options, 'pauseOnHover' );
+  bw_checkbox_arr( $option, __( "Manual advance", "oik-nivo-slider" ) . ' (manual=n|y)', $options, 'manualAdvance' );
   
-  bw_textfield_arr( $option, "Caption opacity", $options, 'captionOpacity', 4 );
-  
-  //bw_tablerow( array( "", "<input type=\"submit\" name=\"ok\" value=\"Save changes\" class=\"button-primary\"/>") ); 
+  BW_::bw_textfield_arr( $option, __( "Caption opacity", "oik-nivo-slider" ), $options, 'captionOpacity', 4 );
   
   etag( "table" ); 
-  e( isubmit( "ok", __( "Save changes", "oik" ), null, "button-primary" ) );
+  e( isubmit( "ok", __( "Save changes", "oik-nivo-slider" ), null, "button-primary" ) );
   			
   etag( "form" );
   bw_flush();
@@ -98,7 +94,7 @@ function oik_nivo_slider_options() {
  * Display some usage notes for the oik-nivo-slider with an example
  */
 function oik_nivo_slider_usage() {
-  p("These options for the jQuery Nivo slider control the default behaviour for each instance of the slider." );
+  BW_::p( __( "These options for the jQuery Nivo slider control the default behaviour for each instance of the slider.", "oik-nivo-slider" ) );
   oik_require( "nivo.inc", "oik-nivo-slider" );
   oik_require( "includes/oik-sc-help.inc" );
   bw_flush();

@@ -60,6 +60,9 @@ class Tests_nivo_inc extends BW_UnitTestCase {
 	 */
 	function test_nivo__example() {
 	
+		global $bw_slider_count; 
+		$bw_slider_count = null;
+	
 		$_SERVER['HTTPS'] = null;
 		$expected = '<div class="slider-wrapper theme-oik">';
 		$expected .= "\n";
