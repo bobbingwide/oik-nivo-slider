@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the oik-nivo-slider package.
 msgid ""
 msgstr ""
-"Project-Id-Version: oik-nivo-slider 1.14.4\n"
+"Project-Id-Version: oik-nivo-slider 1.15.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/oik-nivo-slider\n"
-"POT-Creation-Date: 2017-10-28 08:25:24+00:00\n"
+"POT-Creation-Date: 2017-10-29 15:48:30+00:00\n"
 "MIME-Version: 1.0\n"
 "Plural-Forms: nplurals=2; plural=n == 1 ? 0 : 1;\n"
 "Language: en_GB\n"
@@ -33,6 +33,14 @@ msgstr "%1$s may not be fully functional."
 msgid ""
 "Please install and activate the required minimum version of this plugin:"
 msgstr "Please install and activate the required minimum version of this plugin:"
+
+#: admin/oik-nivo-slider.php:8
+msgid "oik nivo slider settings"
+msgstr "oik nivo slider settings"
+
+#: admin/oik-nivo-slider.php:8
+msgid "Nivo settings"
+msgstr "Nivo settings"
 
 #: admin/oik-nivo-slider.php:15
 msgid "Nivo slider options"

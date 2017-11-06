@@ -1,11 +1,11 @@
-<?php // (C) Copyright Bobbing Wide 2012-2014
+<?php // (C) Copyright Bobbing Wide 2012-2017
 
 /**
  * Define Nivo slider settings fields and page
  */
 function oik_nivo_lazy_admin_menu() {
   register_setting( 'oik_nivo_options', 'bw_nivo_slider', 'oik_plugins_validate' ); // No validation for oik-nivo-slider
-  add_submenu_page( 'oik_menu', 'oik nivo slider settings', "Nivo settings", 'manage_options', 'oik_nivo', "oik_nivo_options_do_page" );
+  add_submenu_page( 'oik_menu', __( 'oik nivo slider settings', "oik-nivo-slider" ), __( "Nivo settings", "oik-nivo-slider" ), 'manage_options', 'oik_nivo', "oik_nivo_options_do_page" );
 }
 
 /**
