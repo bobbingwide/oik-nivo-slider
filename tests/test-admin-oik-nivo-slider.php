@@ -91,7 +91,7 @@ get_translations_for_domain
 		$this->unset_submenu();
 		$this->switch_to_locale( 'bb_BB' );
 		global $submenu;
-		print_r( $submenu );
+		//print_r( $submenu );
 		oik_nivo_admin_menu();
 		$registered = get_registered_settings();
 		$this->assertArrayHasKey( 'bw_nivo_slider', $registered );
@@ -124,6 +124,29 @@ get_translations_for_domain
 		oik_require_lib( "oik-l10n" );
 		oik_l10n_enable_jti();
 	}
+	
+	/**
+	 * Tests oik_nivo_options_do_page
+	 * which assumes admin/oik-nivo-slider.php has been loaded
+	 */
+	
+	function test_oik_nivo_options_do_page() {
+		$this->setExpectedDeprecated( "bw_translate" );
+		ob_start(); 
+		oik_nivo_options_do_page();
+		$html = ob_get_contents();
+		ob_end_clean();
+		$this->assertNotNull( $html );
+		$html = $this->replace_admin_url( $html );
+		$html = $this->replace_home_url( $html );
+		$html_array = $this->tag_break( $html );
+		$this->assertNotNull( $html_array );
+		// @TODO Implement nonce checking in oik_lazy_plugins_server_settings
+		$html_array = $this->replace_nonce_with_nonsense( $html_array, "closedpostboxesnonce", "closedpostboxesnonce" );
+		//$this->generate_expected_file( $html_array );
+		$this->assertArrayEqualsFile( $html_array );
+	}
+	
 	
 	
 }
