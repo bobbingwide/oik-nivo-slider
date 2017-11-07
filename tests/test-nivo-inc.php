@@ -208,11 +208,25 @@ class Tests_nivo_inc extends BW_UnitTestCase {
 		$this->assertArrayEqualsFile( $html );
 		$this->delete_uploaded_files( $attachment );
 		$this->switch_to_locale( "en_GB" );
-	
 	}
 	
+	function test_nivo__help() {
+    $this->switch_to_locale( "en_GB" );
+		$html = nivo__help();
+		//$this->generate_expected_file( $html );
+		$this->assertArrayEqualsFile( $html );
+	}
+	
+	function test_nivo__help_bb_BB() {
+    $this->switch_to_locale( "bb_BB" );
+		$html = nivo__help();
+		//$this->generate_expected_file( $html );
+		$this->assertArrayEqualsFile( $html );
+    $this->switch_to_locale( "en_GB" );
+	}
+	
+	
 	function test_nivo__syntax() {
-		$this->switch_to_locale( "en_GB" );
 		update_option( "posts_per_page", 10 );
 		$array = nivo__syntax();
 		$html = $this->arraytohtml( $array, true );
@@ -225,6 +239,35 @@ class Tests_nivo_inc extends BW_UnitTestCase {
 		update_option( "posts_per_page", 10 );
 		$array = nivo__syntax();
 		$html = $this->arraytohtml( $array, true );
+		//$this->generate_expected_file( $html );
+		$this->assertArrayEqualsFile( $html );
+		$this->switch_to_locale( "en_GB" );
+	}
+	
+	/**
+	 * Test what's echo'd when using an unsupported special post type
+	 */
+	function test_bw_get_special_post_type_bb_BB() {
+		$this->switch_to_locale( "bb_BB" );
+		$posts = bw_get_special_post_type( array( "post_type" => "unsupported:oik-nivo-slider" ) );
+		$this->assertNull( $posts );
+		$html = bw_ret(); 
+		//$this->generate_expected_file( $html );
+		$this->assertArrayEqualsFile( $html );
+		$this->switch_to_locale( "en_GB" );
+	}
+	
+	/**
+	 * This test is for when NextGEN is NOT active!
+	 */ 
+	function test_bw_get_spt_nggallery_bb_BB() {
+		$exists = class_exists( "nggdb" );
+		$this->assertFalse( $exists );
+	
+		$this->switch_to_locale( "bb_BB" );
+		$images = bw_get_spt_nggallery( array( "post_type" => "nggallery:oik-nivo-slider" ) );
+		$this->assertNull( $images );
+		$html = bw_ret(); 
 		//$this->generate_expected_file( $html );
 		$this->assertArrayEqualsFile( $html );
 		$this->switch_to_locale( "en_GB" );
@@ -246,10 +289,5 @@ class Tests_nivo_inc extends BW_UnitTestCase {
 		oik_require_lib( "oik-l10n" );
 		oik_l10n_enable_jti();
 	}
-	
-	
-
-	
-	
 
 }

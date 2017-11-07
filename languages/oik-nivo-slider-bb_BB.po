@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: oik-nivo-slider 1.15.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/oik-nivo-slider\n"
-"POT-Creation-Date: 2017-11-07 14:18:38+00:00\n"
+"POT-Creation-Date: 2017-11-07 16:05:44+00:00\n"
 "MIME-Version: 1.0\n"
 "Plural-Forms: nplurals=2; plural=n == 1 ? 0 : 1;\n"
 "Language: bb_BB\n"
@@ -147,6 +147,21 @@ msgid ""
 msgstr ""
 "Tehse otpoins fOr thE juQrey Nvio siledr cnortol thE dfeualt bhevaoiur fOr "
 "ecah isnatcne Of thE siledr."
+
+
+#: nivo.inc:428
+msgid "Unsupported special post_type: %1$s"
+msgstr "Usnpuoptred sepical psot_tpye: %1$s"
+
+
+#: nivo.inc:471
+msgid "NextGEN does not appear to be activated"
+msgstr "NxeGtEN deos nOt appaer tO bE atcvitaed"
+
+
+#: nivo.inc:764
+msgid "Display the nivo slideshow for attachments or other post types."
+msgstr "Dsilpay thE nvio siledhsow fOr attcamhnets Or ohter psot tpyes."
 
 
 #: nivo.inc:769

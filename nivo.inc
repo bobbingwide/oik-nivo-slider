@@ -425,7 +425,7 @@ function bw_get_special_post_type( $atts ) {
   if ( function_exists( $funcname ) ) {
     $posts = $funcname( $atts ); 
   } else { 
-    e( "Unsupported special post_type: $type" );
+    e( sprintf( __( 'Unsupported special post_type: %1$s', "oik-nivo-slider" ), $type ) );
     $posts = null;
   }
   return( $posts );
@@ -468,7 +468,7 @@ function bw_get_spt_nggallery( $atts ) {
     bw_trace2( $images );
   } else { 
     $images = null;
-    e( "NextGEN does not appear to be activated" ); 
+    e( __( "NextGEN does not appear to be activated", "oik-nivo-slider" ) ); 
   }
   return( $images ); 
 }
@@ -761,7 +761,7 @@ function bw_nivo_slider( $atts=null ) {
  * oik shortcode help for [nivo] 
  */ 
 function nivo__help( $shortcode="nivo" ) {
-  return( "Display the nivo slideshow for attachments or other post types." );
+  return( __( "Display the nivo slideshow for attachments or other post types.", "oik-nivo-slider" ) );
 }
 
 if ( !function_exists( '_sc_thumbnail_full' ) ) {  

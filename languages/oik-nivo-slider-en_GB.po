@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: oik-nivo-slider 1.15.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/oik-nivo-slider\n"
-"POT-Creation-Date: 2017-11-07 14:18:38+00:00\n"
+"POT-Creation-Date: 2017-11-07 16:05:44+00:00\n"
 "MIME-Version: 1.0\n"
 "Plural-Forms: nplurals=2; plural=n == 1 ? 0 : 1;\n"
 "Language: en_GB\n"
@@ -119,6 +119,18 @@ msgid ""
 "These options for the jQuery Nivo slider control the default behaviour for "
 "each instance of the slider."
 msgstr "These options for the jQuery Nivo slider control the default behaviour for each instance of the slider."
+
+#: nivo.inc:428
+msgid "Unsupported special post_type: %1$s"
+msgstr "Unsupported special post_type: %1$s"
+
+#: nivo.inc:471
+msgid "NextGEN does not appear to be activated"
+msgstr "NextGEN does not appear to be activated"
+
+#: nivo.inc:764
+msgid "Display the nivo slideshow for attachments or other post types."
+msgstr "Display the nivo slideshow for attachments or other post types."
 
 #: nivo.inc:769
 msgid "image size"
