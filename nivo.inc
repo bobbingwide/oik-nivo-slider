@@ -766,29 +766,29 @@ function nivo__help( $shortcode="nivo" ) {
 
 if ( !function_exists( '_sc_thumbnail_full' ) ) {  
 function _sc_thumbnail_full() {   
-  return( array( 'thumbnail'       => bw_skv( "full", "thumbnail|medium|large|nnn|wxh", "image size" )   
+  return( array( 'thumbnail'       => BW_::bw_skv( "full", "thumbnail|medium|large|nnn|wxh", __( "image size", "oik-nivo-slider" ) ) 
                ));
-}        
+}
 }
 
 /**
  * oik shortcode syntax for [nivo]
  */ 
 function nivo__syntax( $shortcode='nivo' ) {
-  $nivo_syntax = array( "post_type" => bw_skv( "attachment", "<i>post_type</i>", "Post type to display" )
-                 , "theme" => bw_skv( "default", "bar|custom|dark|light|orman|pascal|oik271|default271", "Theme for the slideshow" )
-                 , "class" => bw_skv( "", "<i>classes</i>", "CSS classes" )
-                 , "link" => bw_skv( "y", "n|file|full", "Link the images to the target post/page or media file" )
-                 , "caption" => bw_skv( "y", "n", "Display the image title as the caption" )
-                 , "format" => bw_skv( null, "<i>format</i>", "field format string" )
-                 , "ribbon" => bw_skv( "y", "n", "Display the ribbon, if the theme supports it" )
+  $nivo_syntax = array( "post_type" => BW_::bw_skv( "attachment", "<i>" . __( "post_type", "oik-nivo-slider" ) . "</i>", __( "Post type to display", "oik-nivo-slider" ) )
+                 , "theme" => BW_::bw_skv( "default", "bar|custom|dark|light|orman|pascal|oik271|default271", __( "Theme for the slideshow", "oik-nivo-slider" ) )
+                 , "class" => BW_::bw_skv( "", "<i>" . __( "classes", "oik-nivo-slider" ) . "</i>", __( "CSS classes", "oik-nivo-slider" ) )
+                 , "link" => BW_::bw_skv( "y", "n|file|full", __( "Link the images to the target post/page or media file", "oik-nivo-slider" ) )
+                 , "caption" => BW_::bw_skv( "y", "n", __( "Display the image title as the caption", "oik-nivo-slider" ) )
+                 , "format" => BW_::bw_skv( null, "<i>" . __( "format", "oik-nivo-slider" ) . "</i>", __( "field format string", "oik-nivo-slider" ) )
+                 , "ribbon" => BW_::bw_skv( "y", "n", __( "Display the ribbon, if the theme supports it", "oik-nivo-slider" ) )
                  );
   $syntax = array_merge( $nivo_syntax, _sc_thumbnail_full() );
-  $syntax += array( "thumbs" => bw_skv( "", "n|y", "Thumbnail navigation" ));
-  $syntax += array( "nav" => bw_skv( "", "n|y", "Control navigation" ));
-  $syntax += array( "pause" => bw_skv( "", "<i>pause</i>", "Pause time in milli seconds" ));
-  $syntax += array( "manual" => bw_skv( "", "n|y", "Manual advance" ));
-  $syntax += array( "effect" => bw_skv( "", "random|sliceDownRight|sliceDownLeft|sliceUpRight|sliceUpLeft|sliceUpDown|sliceUpDownLeft |fold|fade|boxRandom|boxRain|boxRainReverse|boxRainGrow|boxRainGrowReverse|slideInLeft|slideInRight", "transition effect" ) );
+  $syntax += array( "thumbs" => BW_::bw_skv( "", "n|y", __( "Thumbnail navigation", "oik-nivo-slider" ) ));
+  $syntax += array( "nav" => BW_::bw_skv( "", "n|y", __( "Control navigation", "oik-nivo-slider" ) ));
+  $syntax += array( "pause" => BW_::bw_skv( "", "<i>" .  __( "pause", "oik-nivo-slider" ) . "</i>", __( "Pause time in milli seconds", "oik-nivo-slider" ) ));
+  $syntax += array( "manual" => BW_::bw_skv( "", "n|y", __( "Manual advance", "oik-nivo-slider" ) ));
+  $syntax += array( "effect" => BW_::bw_skv( "", "random|sliceDownRight|sliceDownLeft|sliceUpRight|sliceUpLeft|sliceUpDown|sliceUpDownLeft |fold|fade|boxRandom|boxRain|boxRainReverse|boxRainGrow|boxRainGrowReverse|slideInLeft|slideInRight", __( "transition effect", "oik-nivo-slider" ) ) );
   $syntax = array_merge( $syntax, _sc_posts() );
   $syntax = array_merge( $syntax, $nivo_syntax ); // Re-apply the post_type values for this shortcode
   return( $syntax );

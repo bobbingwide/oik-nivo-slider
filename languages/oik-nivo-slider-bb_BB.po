@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: oik-nivo-slider 1.15.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/oik-nivo-slider\n"
-"POT-Creation-Date: 2017-11-06 21:12:02+00:00\n"
+"POT-Creation-Date: 2017-11-07 14:18:38+00:00\n"
 "MIME-Version: 1.0\n"
 "Plural-Forms: nplurals=2; plural=n == 1 ? 0 : 1;\n"
 "Language: bb_BB\n"
@@ -155,6 +155,11 @@ msgstr "iamge szie"
 
 
 #: nivo.inc:778
+msgid "post_type"
+msgstr "psot_tpye"
+
+
+#: nivo.inc:778
 msgid "Post type to display"
 msgstr "Psot tpye tO dsilpay"
 
@@ -162,6 +167,11 @@ msgstr "Psot tpye tO dsilpay"
 #: nivo.inc:779
 msgid "Theme for the slideshow"
 msgstr "Tehme fOr thE siledhsow"
+
+
+#: nivo.inc:780
+msgid "classes"
+msgstr "calsses"
 
 
 #: nivo.inc:780
@@ -177,6 +187,11 @@ msgstr "Lnik thE iamegs tO thE traegt psot/pgae Or mdeia flie"
 #: nivo.inc:782
 msgid "Display the image title as the caption"
 msgstr "Dsilpay thE iamge ttile As thE cpaiton"
+
+
+#: nivo.inc:783
+msgid "format"
+msgstr "froamt"
 
 
 #: nivo.inc:783
@@ -197,6 +212,11 @@ msgstr "Tuhbmanil nvagitaoin"
 #: nivo.inc:788
 msgid "Control navigation"
 msgstr "Cnortol nvagitaoin"
+
+
+#: nivo.inc:789
+msgid "pause"
+msgstr "puase"
 
 
 #: nivo.inc:789

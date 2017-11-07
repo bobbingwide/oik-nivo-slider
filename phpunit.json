@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="" tests="12" assertions="108" errors="0" failures="0" skipped="0" time="7.675869">
-    <testsuite name="Tests_admin_oik_nivo_slider" file="C:\apache\htdocs\wordpress\wp-content\plugins\oik-nivo-slider\tests\test-admin-oik-nivo-slider.php" tests="5" assertions="71" errors="0" failures="0" skipped="0" time="4.200037">
-      <testcase name="test_oik_nivo_admin_menu" class="Tests_admin_oik_nivo_slider" classname="Tests_admin_oik_nivo_slider" file="C:\apache\htdocs\wordpress\wp-content\plugins\oik-nivo-slider\tests\test-admin-oik-nivo-slider.php" line="36" assertions="11" time="2.530568"/>
-      <testcase name="test_translate_bb_BB" class="Tests_admin_oik_nivo_slider" classname="Tests_admin_oik_nivo_slider" file="C:\apache\htdocs\wordpress\wp-content\plugins\oik-nivo-slider\tests\test-admin-oik-nivo-slider.php" line="74" assertions="9" time="0.282090"/>
-      <testcase name="test_oik_nivo_admin_menu_bb_BB" class="Tests_admin_oik_nivo_slider" classname="Tests_admin_oik_nivo_slider" file="C:\apache\htdocs\wordpress\wp-content\plugins\oik-nivo-slider\tests\test-admin-oik-nivo-slider.php" line="86" assertions="17" time="0.310047"/>
-      <testcase name="test_oik_nivo_options_do_page" class="Tests_admin_oik_nivo_slider" classname="Tests_admin_oik_nivo_slider" file="C:\apache\htdocs\wordpress\wp-content\plugins\oik-nivo-slider\tests\test-admin-oik-nivo-slider.php" line="130" assertions="13" time="0.432614"/>
-      <testcase name="test_oik_nivo_options_do_page_bb_BB" class="Tests_admin_oik_nivo_slider" classname="Tests_admin_oik_nivo_slider" file="C:\apache\htdocs\wordpress\wp-content\plugins\oik-nivo-slider\tests\test-admin-oik-nivo-slider.php" line="152" assertions="21" time="0.644718"/>
+  <testsuite name="" tests="14" assertions="138" errors="0" failures="0" skipped="0" time="8.119612">
+    <testsuite name="Tests_admin_oik_nivo_slider" file="C:\apache\htdocs\wordpress\wp-content\plugins\oik-nivo-slider\tests\test-admin-oik-nivo-slider.php" tests="5" assertions="71" errors="0" failures="0" skipped="0" time="4.096208">
+      <testcase name="test_oik_nivo_admin_menu" class="Tests_admin_oik_nivo_slider" classname="Tests_admin_oik_nivo_slider" file="C:\apache\htdocs\wordpress\wp-content\plugins\oik-nivo-slider\tests\test-admin-oik-nivo-slider.php" line="36" assertions="11" time="2.519060"/>
+      <testcase name="test_translate_bb_BB" class="Tests_admin_oik_nivo_slider" classname="Tests_admin_oik_nivo_slider" file="C:\apache\htdocs\wordpress\wp-content\plugins\oik-nivo-slider\tests\test-admin-oik-nivo-slider.php" line="74" assertions="9" time="0.237293"/>
+      <testcase name="test_oik_nivo_admin_menu_bb_BB" class="Tests_admin_oik_nivo_slider" classname="Tests_admin_oik_nivo_slider" file="C:\apache\htdocs\wordpress\wp-content\plugins\oik-nivo-slider\tests\test-admin-oik-nivo-slider.php" line="86" assertions="17" time="0.342532"/>
+      <testcase name="test_oik_nivo_options_do_page" class="Tests_admin_oik_nivo_slider" classname="Tests_admin_oik_nivo_slider" file="C:\apache\htdocs\wordpress\wp-content\plugins\oik-nivo-slider\tests\test-admin-oik-nivo-slider.php" line="130" assertions="13" time="0.417503"/>
+      <testcase name="test_oik_nivo_options_do_page_bb_BB" class="Tests_admin_oik_nivo_slider" classname="Tests_admin_oik_nivo_slider" file="C:\apache\htdocs\wordpress\wp-content\plugins\oik-nivo-slider\tests\test-admin-oik-nivo-slider.php" line="152" assertions="21" time="0.579820"/>
     </testsuite>
-    <testsuite name="Tests_nivo_inc" file="C:\apache\htdocs\wordpress\wp-content\plugins\oik-nivo-slider\tests\test-nivo-inc.php" tests="7" assertions="37" errors="0" failures="0" skipped="0" time="3.475832">
-      <testcase name="test_is_ssl" class="Tests_nivo_inc" classname="Tests_nivo_inc" file="C:\apache\htdocs\wordpress\wp-content\plugins\oik-nivo-slider\tests\test-nivo-inc.php" line="26" assertions="3" time="0.038004"/>
-      <testcase name="test_nivo__example" class="Tests_nivo_inc" classname="Tests_nivo_inc" file="C:\apache\htdocs\wordpress\wp-content\plugins\oik-nivo-slider\tests\test-nivo-inc.php" line="58" assertions="1" time="0.229337"/>
-      <testcase name="test_issue_3_image_2_onwards_has_display_none" class="Tests_nivo_inc" classname="Tests_nivo_inc" file="C:\apache\htdocs\wordpress\wp-content\plugins\oik-nivo-slider\tests\test-nivo-inc.php" line="82" assertions="2" time="0.082207"/>
-      <testcase name="test_bw_get_spt_screenshot" class="Tests_nivo_inc" classname="Tests_nivo_inc" file="C:\apache\htdocs\wordpress\wp-content\plugins\oik-nivo-slider\tests\test-nivo-inc.php" line="95" assertions="1" time="0.050912"/>
-      <testcase name="test_no_http_in_output" class="Tests_nivo_inc" classname="Tests_nivo_inc" file="C:\apache\htdocs\wordpress\wp-content\plugins\oik-nivo-slider\tests\test-nivo-inc.php" line="104" assertions="2" time="0.291960"/>
-      <testcase name="test_bw_format_nivo" class="Tests_nivo_inc" classname="Tests_nivo_inc" file="C:\apache\htdocs\wordpress\wp-content\plugins\oik-nivo-slider\tests\test-nivo-inc.php" line="130" assertions="14" time="1.620881"/>
-      <testcase name="test_bw_format_nivo_attachment" class="Tests_nivo_inc" classname="Tests_nivo_inc" file="C:\apache\htdocs\wordpress\wp-content\plugins\oik-nivo-slider\tests\test-nivo-inc.php" line="196" assertions="14" time="1.162531"/>
+    <testsuite name="Tests_nivo_inc" file="C:\apache\htdocs\wordpress\wp-content\plugins\oik-nivo-slider\tests\test-nivo-inc.php" tests="9" assertions="67" errors="0" failures="0" skipped="0" time="4.023404">
+      <testcase name="test_is_ssl" class="Tests_nivo_inc" classname="Tests_nivo_inc" file="C:\apache\htdocs\wordpress\wp-content\plugins\oik-nivo-slider\tests\test-nivo-inc.php" line="26" assertions="3" time="0.038025"/>
+      <testcase name="test_nivo__example" class="Tests_nivo_inc" classname="Tests_nivo_inc" file="C:\apache\htdocs\wordpress\wp-content\plugins\oik-nivo-slider\tests\test-nivo-inc.php" line="58" assertions="1" time="0.186559"/>
+      <testcase name="test_issue_3_image_2_onwards_has_display_none" class="Tests_nivo_inc" classname="Tests_nivo_inc" file="C:\apache\htdocs\wordpress\wp-content\plugins\oik-nivo-slider\tests\test-nivo-inc.php" line="82" assertions="2" time="0.081338"/>
+      <testcase name="test_bw_get_spt_screenshot" class="Tests_nivo_inc" classname="Tests_nivo_inc" file="C:\apache\htdocs\wordpress\wp-content\plugins\oik-nivo-slider\tests\test-nivo-inc.php" line="95" assertions="1" time="0.097560"/>
+      <testcase name="test_no_http_in_output" class="Tests_nivo_inc" classname="Tests_nivo_inc" file="C:\apache\htdocs\wordpress\wp-content\plugins\oik-nivo-slider\tests\test-nivo-inc.php" line="104" assertions="2" time="0.270540"/>
+      <testcase name="test_bw_format_nivo" class="Tests_nivo_inc" classname="Tests_nivo_inc" file="C:\apache\htdocs\wordpress\wp-content\plugins\oik-nivo-slider\tests\test-nivo-inc.php" line="130" assertions="16" time="1.572081"/>
+      <testcase name="test_bw_format_nivo_attachment" class="Tests_nivo_inc" classname="Tests_nivo_inc" file="C:\apache\htdocs\wordpress\wp-content\plugins\oik-nivo-slider\tests\test-nivo-inc.php" line="196" assertions="16" time="1.095265"/>
+      <testcase name="test_nivo__syntax" class="Tests_nivo_inc" classname="Tests_nivo_inc" file="C:\apache\htdocs\wordpress\wp-content\plugins\oik-nivo-slider\tests\test-nivo-inc.php" line="214" assertions="9" time="0.187594"/>
+      <testcase name="test_nivo__syntax_bb_BB" class="Tests_nivo_inc" classname="Tests_nivo_inc" file="C:\apache\htdocs\wordpress\wp-content\plugins\oik-nivo-slider\tests\test-nivo-inc.php" line="223" assertions="17" time="0.494442"/>
     </testsuite>
   </testsuite>
 </testsuites>

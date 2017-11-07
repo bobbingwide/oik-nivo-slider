@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: oik-nivo-slider 1.15.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/oik-nivo-slider\n"
-"POT-Creation-Date: 2017-11-06 21:12:02+00:00\n"
+"POT-Creation-Date: 2017-11-07 14:18:38+00:00\n"
 "MIME-Version: 1.0\n"
 "Plural-Forms: nplurals=2; plural=n == 1 ? 0 : 1;\n"
 "Language: en_GB\n"
@@ -125,12 +125,20 @@ msgid "image size"
 msgstr "image size"
 
 #: nivo.inc:778
+msgid "post_type"
+msgstr "post_type"
+
+#: nivo.inc:778
 msgid "Post type to display"
 msgstr "Post type to display"
 
 #: nivo.inc:779
 msgid "Theme for the slideshow"
 msgstr "Theme for the slideshow"
+
+#: nivo.inc:780
+msgid "classes"
+msgstr "classes"
 
 #: nivo.inc:780
 msgid "CSS classes"
@@ -143,6 +151,10 @@ msgstr "Link the images to the target post/page or media file"
 #: nivo.inc:782
 msgid "Display the image title as the caption"
 msgstr "Display the image title as the caption"
+
+#: nivo.inc:783
+msgid "format"
+msgstr "format"
 
 #: nivo.inc:783
 msgid "field format string"
@@ -159,6 +171,10 @@ msgstr "Thumbnail navigation"
 #: nivo.inc:788
 msgid "Control navigation"
 msgstr "Control navigation"
+
+#: nivo.inc:789
+msgid "pause"
+msgstr "pause"
 
 #: nivo.inc:789
 msgid "Pause time in milli seconds"

@@ -211,6 +211,43 @@ class Tests_nivo_inc extends BW_UnitTestCase {
 	
 	}
 	
+	function test_nivo__syntax() {
+		$this->switch_to_locale( "en_GB" );
+		update_option( "posts_per_page", 10 );
+		$array = nivo__syntax();
+		$html = $this->arraytohtml( $array, true );
+		//$this->generate_expected_file( $html );
+		$this->assertArrayEqualsFile( $html );
+	}
+	
+	function test_nivo__syntax_bb_BB() {
+		$this->switch_to_locale( "bb_BB" );
+		update_option( "posts_per_page", 10 );
+		$array = nivo__syntax();
+		$html = $this->arraytohtml( $array, true );
+		//$this->generate_expected_file( $html );
+		$this->assertArrayEqualsFile( $html );
+		$this->switch_to_locale( "en_GB" );
+	}
+	
+	/**
+	 * Reloads the text domains
+	 * 
+	 * - Loading the 'oik-libs' text domain from the oik-libs plugin invalidates tests where the plugin is delivered from WordPress.org so oik-libs won't exist.
+	 * - but we do need to reload oik's and oik-nivo-slider's text domains
+	 * - and cause the null domain to be rebuilt.
+	 */
+	function reload_domains() {
+		$domains = array( "oik", "oik-nivo-slider" );
+		foreach ( $domains as $domain ) {
+			$loaded = bw_load_plugin_textdomain( $domain );
+			$this->assertTrue( $loaded, "$domain not loaded" );
+		}
+		oik_require_lib( "oik-l10n" );
+		oik_l10n_enable_jti();
+	}
+	
+	
 
 	
 	
