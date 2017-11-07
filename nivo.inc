@@ -1,4 +1,4 @@
-<?php // (C) Copyright Bobbing Wide 2012-2015
+<?php // (C) Copyright Bobbing Wide 2012-2017
 
 /**
  * Format the Nivo output for posts which have attached images 
@@ -31,7 +31,7 @@ function bw_format_nivo( $post, $atts ) {
   $thumbnail = bw_thumbnail( $post->ID, $atts );
   $permalink = get_permalink( $post->ID );
   if ( bw_validate_torf( $atts['link'] ) ) {
-    alink( null, $permalink , $thumbnail, $alt );  
+    BW_::alink( null, $permalink , $thumbnail, $alt );  
   } else {
     e( $thumbnail );
   }    
