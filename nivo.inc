@@ -392,12 +392,12 @@ function bw_format_nivo_attachment( $post, $atts ) {
 		}
     if ( bw_validate_torf( $atts['link'] ) ) {
       $permalink = bw_get_image_link( $post->ID );
-      alink( "iframe", $permalink , $thumbnail, null );  
+      BW_::alink( "iframe", $permalink , $thumbnail, null );  
     } elseif ( $atts['link'] == "file" ) {
-      alink( null, $image, $thumbnail, null, null, kv( "rel", $atts["slider-id"] )); 
+      BW_::alink( null, $image, $thumbnail, null, null, kv( "rel", $atts["slider-id"] )); 
 		} elseif ( $atts['link'] == "full" ) {
 			$full_image = bw_get_attached_file_name( $post->ID, array( "thumbnail" => "full" ) );
-      alink( null, $full_image, $thumbnail, null, null, kv( "rel", $atts["slider-id"] )); 
+      BW_::alink( null, $full_image, $thumbnail, null, null, kv( "rel", $atts["slider-id"] )); 
     } else { 
       e( $thumbnail );
     }    

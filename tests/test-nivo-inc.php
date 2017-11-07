@@ -119,7 +119,13 @@ class Tests_nivo_inc extends BW_UnitTestCase {
 	 * Note: Every time this test is performed another screenshot-1 file and all its variations is created in uploads
 	 * We should delete these file afterwards.
 	 *
-	 * No need to 'properly' switch_to_locale here as we don't expect anything to be translated
+	 * No need to 'properly' switch_to_locale here as we don't expect anything to be translated.
+	 *
+	 * The generated HTML needs to be sanitized 
+	 * `<img class="bw_thumbnail post-33566 page type-page status-publish hentry entry has-post-thumbnail" 
+	 * src="https://qw/wordpress/wp-content/uploads/2017/11/screenshot-1.jpg" title="post title 1" 
+	 * alt="post title 1"  data-thumb="https://qw/wordpress/wp-content/uploads/2017/11/screenshot-1.jpg" />
+	 * `
 	 */
 	function test_bw_format_nivo() {
 		$this->switch_to_locale( "en_GB" );
@@ -139,10 +145,13 @@ class Tests_nivo_inc extends BW_UnitTestCase {
 	
 	}
 	
+	/**
+	 * Non generic routine to delete the uploaded files
+	 *
+	 * @TODO Improve logic to work with specific upload files
+	 */
 	function delete_uploaded_files( $attachment ) {
 		//print_r( $attachment );
-		//unlink( $attachment->guid );
-		// How do we determine the name of the upload folder? wp_upload_dir
 		$dir = wp_upload_dir();
 		$path = bw_array_get( $dir, "path", null );
 		$this->assertNotNull( $path );
@@ -155,25 +164,8 @@ class Tests_nivo_inc extends BW_UnitTestCase {
 	
 	
 	/**
-	
-	<img class="bw_thumbnail post-33566 page type-page status-publish hentry entry has-post-thumbnail" src="https://qw/wordpress/wp-content/uploads/2017/11/screenshot-1.jpg" title="post title 1" a
-lt="post title 1"  data-thumb="https://qw/wordpress/wp-content/uploads/2017/11/screenshot-1.jpg" />
-
-*/
-	
-	/** 
-	 * Create a dummy attachment, which is actually a page
-	 * but at least has  post meta of "_wp_attached_file" 
+	 * Create a dummy page 
 	 */
-	function dummy_attachment_page() {
-		$args = array( 'post_type' => 'page', 'post_title' => 'post title', 'post_excerpt' => "caption", 'post_content' => "description" );
-		$id = self::factory()->post->create( $args );
-		$post = get_post( $id );
-		add_post_meta( $id, "_wp_attached_file", "attached.file", true );
-		return $post;
-	}
-	
-	
 	function dummy_post( $n ) {
 		$args = array( 'post_type' => 'page', 'post_title' => "post title $n", 'post_excerpt' => 'Excerpt. No post ID' );
 		$id = self::factory()->post->create( $args );
@@ -181,6 +173,9 @@ lt="post title 1"  data-thumb="https://qw/wordpress/wp-content/uploads/2017/11/s
 		return $post;
 	}
 	
+	/**
+	 * Create a dummy attachment
+	 */
 	function dummy_attachment( $parent ) {
 		$args = array( 'post_type' => 'attachment'
 								 , 'post_parent' => $parent
@@ -195,7 +190,28 @@ lt="post title 1"  data-thumb="https://qw/wordpress/wp-content/uploads/2017/11/s
 		return $post;
 	}
 	
+	/**
+	 * We need to test the different values for "link" and ensure that "count" and "slider-id" are also set appropriately to avoid warnings.
+	 */
+	function test_bw_format_nivo_attachment() {
+		$this->switch_to_locale( "en_GB" );
+		$post = $this->dummy_post( 1 );
+		$attachment = $this->dummy_attachment( $post->ID );
+		bw_format_nivo_attachment( $attachment, array( "caption" => "n", "link" => "y", "count" => 0, "slider-id" => 1 ) );
+		bw_format_nivo_attachment( $attachment, array( "caption" => "n", "link" => "file", "count" => 1, "slider-id" => 2 ) );
+		bw_format_nivo_attachment( $attachment, array( "caption" => "n", "link" => "full", "count" => 2, "slider-id" => 3  ) );
+		bw_format_nivo_attachment( $attachment, array( "caption" => "n", "link" => "n", "count" => 3, "slider-id" => 4 ) );
+		$html = bw_ret();
+		$html = str_replace( $attachment->guid, "screenshot-1.jpg", $html );
+		$html = $this->replace_home_url( $html );
+		//$this->generate_expected_file( $html );
+		$this->assertArrayEqualsFile( $html );
+		$this->delete_uploaded_files( $attachment );
+		$this->switch_to_locale( "en_GB" );
 	
+	}
+	
+
 	
 	
 
