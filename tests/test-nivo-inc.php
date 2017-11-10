@@ -136,12 +136,27 @@ class Tests_nivo_inc extends BW_UnitTestCase {
 		bw_format_nivo( $post, array( "caption" => "y", "link" => "y" ) );
 		$html = bw_ret();
 		$html = str_replace( $attachment->guid, "screenshot-1.jpg", $html );
+		$html = $this->strip_post_classes( $html, $post->ID );
 		$html = $this->replace_post_id( $html, $post, "post-" );
 		$html = $this->replace_home_url( $html );
 		//$this->generate_expected_file( $html );
 		$this->assertArrayEqualsFile( $html );
 		$this->delete_uploaded_files( $attachment );
 		$this->switch_to_locale( "en_GB" );
+	
+	}
+	
+	function strip_post_classes( $html, $post_id ) {
+		//echo $html;
+		//echo PHP_EOL;
+    $classes = bw_get_post_class( $post_id );
+		//echo "Classes" . PHP_EOL;
+		//echo $classes;
+		//echo "!";
+		$stripped = str_replace( $classes, "post-42 page type-page status-publish hentry entry has-post-thumbnail", $html );
+		$this->assertNotEquals( $html, $stripped );
+		return $stripped;
+		
 	
 	}
 	

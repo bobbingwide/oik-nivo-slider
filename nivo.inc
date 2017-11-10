@@ -797,7 +797,7 @@ function nivo__syntax( $shortcode='nivo' ) {
 /**
  * Show an example of the Nivo shortcode
  *
- * Note: The default processing is to show attached images
+ * Note: The default processing is to show attached images.
  * If there is no post (as on admin pages) then it shows unattached images.
  * An interesting side effect.
  */ 

@@ -128,6 +128,7 @@ class Tests_admin_oik_nivo_slider extends BW_UnitTestCase {
 	 * Note: For environment dependence we'll need to update the settings.
 	 */
 	function test_oik_nivo_options_do_page() {
+		$this->update_options();
 		$this->switch_to_locale( 'en_GB' );
 		ob_start(); 
 		oik_nivo_options_do_page();
@@ -144,12 +145,32 @@ class Tests_admin_oik_nivo_slider extends BW_UnitTestCase {
 		$this->assertArrayEqualsFile( $html_array );
 	}
 	
+	function update_options() {
+		$bw_nivo_slider = get_option( "bw_nivo_slider" );
+		$bw_nivo_slider['effect'] = 'sliceDownRight';
+		$bw_nivo_slider['slices'] = '8';
+		$bw_nivo_slider['boxCols'] = '8';
+		$bw_nivo_slider['boxRows'] = '6';
+		$bw_nivo_slider['animSpeed'] = '500';
+		$bw_nivo_slider['pauseTime'] = '10000';
+		$bw_nivo_slider['controlNav'] = 'on';
+		$bw_nivo_slider['controlNavThumbs'] = '0';
+		$bw_nivo_slider['directionNav'] = 'on';
+		$bw_nivo_slider['directionNavHide'] = '0';
+		$bw_nivo_slider['pauseOnHover'] = 'on';
+		$bw_nivo_slider['manualAdvance'] = 'on';
+		$bw_nivo_slider['captionOpacity'] = '0.6';
+		update_option( "bw_nivo_slider", $bw_nivo_slider );
+	}
+	
 	
 	/**
 	 * Tests oik_nivo_options_do_page
 	 * which assumes admin/oik-nivo-slider.php has been loaded
 	 */
 	function test_oik_nivo_options_do_page_bb_BB() {
+	
+		$this->update_options();
 		$this->switch_to_locale( 'bb_BB' );
 		ob_start(); 
 		oik_nivo_options_do_page();
