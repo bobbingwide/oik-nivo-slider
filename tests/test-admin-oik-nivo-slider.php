@@ -128,6 +128,7 @@ class Tests_admin_oik_nivo_slider extends BW_UnitTestCase {
 	 * Note: For environment dependence we'll need to update the settings.
 	 */
 	function test_oik_nivo_options_do_page() {
+		$_SERVER['REQUEST_URI'] = "/";
 		$this->update_options();
 		$this->switch_to_locale( 'en_GB' );
 		ob_start(); 
