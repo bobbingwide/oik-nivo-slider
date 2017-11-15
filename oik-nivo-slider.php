@@ -53,7 +53,7 @@ function oik_nivo_admin_menu() {
  * Note: oik-nivo-slider now reports that it's dependent upon oik v2.1
  * Note: oik-nivo-slider now dependent upon oik v2.4 
  * Note: oik-nivo-slider now dependent upon oik v3.0.0 
- * Note: oik-nivo-slider v1.15.0 dependent upon oik v3.2.0-RC1
+ * Note: oik-nivo-slider v1.15.0 dependent upon oik v3.2.0
  */ 
 function oik_nivo_activation() {
   static $plugin_basename = null;
@@ -64,7 +64,7 @@ function oik_nivo_activation() {
       require_once( "admin/oik-activation.php" );
     }
   }  
-  $depends = "oik:3.2.0-RC1";
+  $depends = "oik:3.2.0";
   oik_plugin_lazy_activation( __FILE__, $depends, "oik_plugin_plugin_inactive" );
 }
 

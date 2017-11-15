@@ -2,9 +2,9 @@
 Contributors: bobbingwide, vsgloik
 Donate link: https://www.oik-plugins.com/oik/oik-donate/
 Tags:  [nivo], shortcode, slider, jQuery, oik
-Requires at least: 3.9
-Tested up to: 4.9-RC2
-Stable tag: 1.14.4
+Requires at least: 4.8
+Tested up to: 4.9
+Stable tag: 1.15.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -277,7 +277,7 @@ YES. See [oik-nivo-slider](https://www.oik-plugins.com/oik-plugins/oik-nivo-slid
 
 == Upgrade Notice ==
 = 1.15.0 = 
-Now depends on oik v3.2.0-RC1. Please update oik before updating oik-nivo-slider.
+Now depends on oik v3.2.0. Please update oik before updating oik-nivo-slider.
 
 = 1.14.4 = 
 Tested with WordPress 4.7.3 and WordPress Multisite. Tested with PHP 7.1
@@ -348,8 +348,8 @@ Now depends on oik v2.4 or higher. Upgrade if you're using the Nivo v2.7.1 theme
 == Changelog ==
 = 1.15.0 =
 * Changed: 100% internationalized and localized in UK English [github bobbingwide oik-nivo-slider issues 6]
-* Tested: With oik v3.2.0-RC1
-* Tested: With WordPress 4.8.2, WordPress 4.9-RC2 and WordPress Multisite
+* Tested: With oik v3.2.0
+* Tested: With WordPress 4.8.3, WordPress 4.9 and WordPress Multisite
 * Tested: With PHP 7.0 and 7.1
 
 = 1.14.4 = 
