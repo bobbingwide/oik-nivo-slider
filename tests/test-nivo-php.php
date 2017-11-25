@@ -3,15 +3,15 @@
 /**
  * @package oik-nivo-slider
  * 
- * Test the functions in nivo.inc
+ * Test the functions in nivo.php
  */
-class Tests_nivo_inc extends BW_UnitTestCase {
+class Tests_nivo_php extends BW_UnitTestCase {
 
 	/**
 	 */
 	function setUp() {
 		parent::setUp();
-		oik_require( "nivo.inc", "oik-nivo-slider" );
+		oik_require( "nivo.php", "oik-nivo-slider" );
 		oik_require_lib( "oik-sc-help" );
 	}
 	

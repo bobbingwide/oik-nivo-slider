@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: oik-nivo-slider 1.15.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/oik-nivo-slider\n"
-"POT-Creation-Date: 2017-11-10 16:35:37+00:00\n"
+"POT-Creation-Date: 2017-11-25 17:11:32+00:00\n"
 "MIME-Version: 1.0\n"
 "Plural-Forms: nplurals=2; plural=n == 1 ? 0 : 1;\n"
 "Language: bb_BB\n"
@@ -130,7 +130,7 @@ msgid "Pause on hover"
 msgstr "Puase On hvoer"
 
 
-#: admin/oik-nivo-slider.php:82 nivo.inc:790
+#: admin/oik-nivo-slider.php:82 nivo.php:790
 msgid "Manual advance"
 msgstr "Mnaaul avdnace"
 
@@ -154,102 +154,102 @@ msgstr ""
 "ecah isnatcne Of thE siledr."
 
 
-#: nivo.inc:428
+#: nivo.php:428
 msgid "Unsupported special post_type: %1$s"
 msgstr "Usnpuoptred sepical psot_tpye: %1$s"
 
 
-#: nivo.inc:471
+#: nivo.php:471
 msgid "NextGEN does not appear to be activated"
 msgstr "NxeGtEN deos nOt appaer tO bE atcvitaed"
 
 
-#: nivo.inc:764
+#: nivo.php:764
 msgid "Display the nivo slideshow for attachments or other post types."
 msgstr "Dsilpay thE nvio siledhsow fOr attcamhnets Or ohter psot tpyes."
 
 
-#: nivo.inc:769
+#: nivo.php:769
 msgid "image size"
 msgstr "iamge szie"
 
 
-#: nivo.inc:778
+#: nivo.php:778
 msgid "post_type"
 msgstr "psot_tpye"
 
 
-#: nivo.inc:778
+#: nivo.php:778
 msgid "Post type to display"
 msgstr "Psot tpye tO dsilpay"
 
 
-#: nivo.inc:779
+#: nivo.php:779
 msgid "Theme for the slideshow"
 msgstr "Tehme fOr thE siledhsow"
 
 
-#: nivo.inc:780
+#: nivo.php:780
 msgid "classes"
 msgstr "calsses"
 
 
-#: nivo.inc:780
+#: nivo.php:780
 msgid "CSS classes"
 msgstr "CSS calsses"
 
 
-#: nivo.inc:781
+#: nivo.php:781
 msgid "Link the images to the target post/page or media file"
 msgstr "Lnik thE iamegs tO thE traegt psot/pgae Or mdeia flie"
 
 
-#: nivo.inc:782
+#: nivo.php:782
 msgid "Display the image title as the caption"
 msgstr "Dsilpay thE iamge ttile As thE cpaiton"
 
 
-#: nivo.inc:783
+#: nivo.php:783
 msgid "format"
 msgstr "froamt"
 
 
-#: nivo.inc:783
+#: nivo.php:783
 msgid "field format string"
 msgstr "feild froamt srtnig"
 
 
-#: nivo.inc:784
+#: nivo.php:784
 msgid "Display the ribbon, if the theme supports it"
 msgstr "Dsilpay thE rbiobn, If thE tehme spuoptrs It"
 
 
-#: nivo.inc:787
+#: nivo.php:787
 msgid "Thumbnail navigation"
 msgstr "Tuhbmanil nvagitaoin"
 
 
-#: nivo.inc:788
+#: nivo.php:788
 msgid "Control navigation"
 msgstr "Cnortol nvagitaoin"
 
 
-#: nivo.inc:789
+#: nivo.php:789
 msgid "pause"
 msgstr "puase"
 
 
-#: nivo.inc:789
+#: nivo.php:789
 msgid "Pause time in milli seconds"
 msgstr "Puase tmie In mlili scenods"
 
 
-#: nivo.inc:791
+#: nivo.php:791
 msgid "transition effect"
 msgstr "tarsntioin effcet"
 
 
-#: nivo.inc:806
+#: nivo.php:806
 msgid ""
 "Slideshow of the screenshots from oik-nivo-slider, using the oik theme and "
 "the current settings."

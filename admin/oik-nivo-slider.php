@@ -95,8 +95,8 @@ function oik_nivo_slider_options() {
  */
 function oik_nivo_slider_usage() {
   BW_::p( __( "These options for the jQuery Nivo slider control the default behaviour for each instance of the slider.", "oik-nivo-slider" ) );
-  oik_require( "nivo.inc", "oik-nivo-slider" );
-  oik_require( "includes/oik-sc-help.inc" );
+  oik_require( "nivo.php", "oik-nivo-slider" );
+	oik_require_lib( "oik-sc-help" );
   bw_flush();
   nivo__example();
   sediv("cleared"); 
