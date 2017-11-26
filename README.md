@@ -278,7 +278,7 @@ YES. See [oik-nivo-slider](https://www.oik-plugins.com/oik-plugins/oik-nivo-slid
 
 ## Upgrade Notice 
 # 1.15.0 
-Now depends on oik v3.2.0. Please update oik before updating oik-nivo-slider.
+Now depends on oik v3.2.1. Please update oik before updating oik-nivo-slider.
 
 # 1.14.4 
 Tested with WordPress 4.7.3 and WordPress Multisite. Tested with PHP 7.1
@@ -349,8 +349,8 @@ Now depends on oik v2.4 or higher. Upgrade if you're using the Nivo v2.7.1 theme
 ## Changelog 
 # 1.15.0 
 * Changed: 100% internationalized and localized in UK English https://github.com/bobbingwide/oik-nivo-slider/issues/6
-* Tested: With oik v3.2.0
-* Tested: With WordPress 4.8.3, WordPress 4.9 and WordPress Multisite
+* Changed: Depends on oik v3.2.1
+* Tested: With WordPress 4.8.3, WordPress 4.9 and WordPress Multisite https://github.com/bobbingwide/oik-nivo-slider/issues/7
 * Tested: With PHP 7.0 and 7.1
 
 # 1.14.4 
