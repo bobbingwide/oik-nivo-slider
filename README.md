@@ -4,8 +4,8 @@
 * Donate link: https://www.oik-plugins.com/oik/oik-donate/
 * Tags:  [nivo], shortcode, slider, jQuery, oik
 * Requires at least: 4.8
-* Tested up to: 4.9
-* Stable tag: 1.15.0
+* Tested up to: 4.9.4
+* Stable tag: 1.15.1
 * License: GPLv2 or later
 * License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -277,6 +277,9 @@ YES. See [oik-nivo-slider](https://www.oik-plugins.com/oik-plugins/oik-nivo-slid
 12. oik Nivo slider options page
 
 ## Upgrade Notice 
+# 1.15.1 
+Fixes "Unable to locate routine to expand shortcode" message
+
 # 1.15.0 
 Now depends on oik v3.2.1. Please update oik before updating oik-nivo-slider.
 
@@ -347,6 +350,9 @@ Now depends on oik v2.4 or higher. Upgrade if you're using the Nivo v2.7.1 theme
 * first version works with oik version 1.11
 
 ## Changelog 
+# 1.15.1 
+* Fixed: Loads nivo.php rather than nivo.inc to expand the nivo shortcode
+
 # 1.15.0 
 * Changed: 100% internationalized and localized in UK English https://github.com/bobbingwide/oik-nivo-slider/issues/6
 * Changed: Depends on oik v3.2.1
