@@ -3,11 +3,12 @@
 * Contributors: bobbingwide, vsgloik
 * Donate link: https://www.oik-plugins.com/oik/oik-donate/
 * Tags:  [nivo], shortcode, slider, jQuery, oik
-* Requires at least: 4.8
-* Tested up to: 4.9.4
-* Stable tag: 1.15.1
+* Requires at least: 4.9
+* Tested up to: 4.0
+* Stable tag: 1.15.2
 * License: GPLv2 or later
 * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+* Gutenberg compatible: Yes
 
 [nivo] shortcode for the responsive jQuery "Nivo slider" for posts, pages, attachments and custom post types using oik
 
@@ -277,6 +278,9 @@ YES. See [oik-nivo-slider](https://www.oik-plugins.com/oik-plugins/oik-nivo-slid
 12. oik Nivo slider options page
 
 ## Upgrade Notice 
+# 1.15.2 
+Now depends on oik v3.2.8. Gutenberg compatible.
+
 # 1.15.1 
 Fixes "Unable to locate routine to expand shortcode" message
 
@@ -350,6 +354,12 @@ Now depends on oik v2.4 or higher. Upgrade if you're using the Nivo v2.7.1 theme
 * first version works with oik version 1.11
 
 ## Changelog 
+# 1.15.2 
+* Changed: Now depends on oik v3.2.8
+* Tested: With WordPress 5.0-RC3
+* Tested: With Gutenberg 4.6.1
+* Tested: With PHP 7.1 and 7.2
+
 # 1.15.1 
 * Fixed: Loads nivo.php rather than nivo.inc to expand the nivo shortcode
 

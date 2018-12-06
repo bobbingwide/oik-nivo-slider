@@ -1,4 +1,4 @@
-<?php // (C) Copyright Bobbing Wide 2017
+<?php // (C) Copyright Bobbing Wide 2017, 2018
 
 
 /**
@@ -32,6 +32,8 @@ class Tests_admin_oik_nivo_slider extends BW_UnitTestCase {
 )
 	 * - How do we test that the submenu page has been added?
 	 * - How do we test the authority?
+	 *
+	 * - This test assumes oik-nivo-slider is activated
 	 */
 	function test_oik_nivo_admin_menu() {
 		wp_set_current_user( 1 );
