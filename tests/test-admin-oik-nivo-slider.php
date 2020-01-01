@@ -1,4 +1,4 @@
-<?php // (C) Copyright Bobbing Wide 2017, 2018
+<?php // (C) Copyright Bobbing Wide 2017, 2018, 2020
 
 
 /**
@@ -10,7 +10,7 @@ class Tests_admin_oik_nivo_slider extends BW_UnitTestCase {
 
 	/**
 	 */
-	function setUp() {
+	function setUp() : void {
 		parent::setUp();
 		//oik_require( "admin/oik-nivo-slider.php", "oik-nivo-slider" );
 		//oik_require_lib( "oik-sc-help" );

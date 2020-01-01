@@ -1,4 +1,4 @@
-<?php // (C) Copyright Bobbing Wide 2017
+<?php // (C) Copyright Bobbing Wide 2017,2020
 
 /**
  * @package oik-nivo-slider
@@ -9,7 +9,7 @@ class Tests_nivo_php extends BW_UnitTestCase {
 
 	/**
 	 */
-	function setUp() {
+	function setUp(): void {
 		parent::setUp();
 		oik_require( "nivo.php", "oik-nivo-slider" );
 		oik_require_lib( "oik-sc-help" );
@@ -36,7 +36,7 @@ class Tests_nivo_php extends BW_UnitTestCase {
 		$url = set_url_scheme( $url );
 		//echo $url;
 		
-		$this->assertContains( "https://", $url );
+		$this->assertStringContainsString( "https://", $url );
 		
 		
 	}	
@@ -69,7 +69,7 @@ class Tests_nivo_php extends BW_UnitTestCase {
 		 
 		nivo__example();
 		$actual = bw_ret();
-		$this->assertContains( $expected, $actual );
+		$this->assertStringContainsString( $expected, $actual );
 		
 	}
 	
@@ -85,8 +85,8 @@ class Tests_nivo_php extends BW_UnitTestCase {
 								 );
 		$actual = bw_nivo_slider( $atts ); 
 		//echo $actual;
-		$this->assertContains( 'screenshot-1.jpg" />', $actual );
-		$this->assertContains( 'screenshot-2.jpg"  style="display:none" />', $actual );
+		$this->assertStringContainsString( 'screenshot-1.jpg" />', $actual );
+		$this->assertStringContainsString( 'screenshot-2.jpg"  style="display:none" />', $actual );
 	}
 	
 	/**
@@ -107,8 +107,8 @@ class Tests_nivo_php extends BW_UnitTestCase {
 		nivo__example();
 		$actual = bw_ret();
 		//echo $actual;
-		$this->assertContains( "https://", $actual );
-		$this->assertNotContains( "http://", $actual );
+		$this->assertStringContainsString( "https://", $actual );
+		$this->assertStringNotContainsString( "http://", $actual );
 	}
 	
 	
@@ -192,6 +192,7 @@ class Tests_nivo_php extends BW_UnitTestCase {
 	 * Create a dummy attachment
 	 */
 	function dummy_attachment( $parent ) {
+		require_once ABSPATH . 'wp-admin/includes/image.php';
 		$args = array( 'post_type' => 'attachment'
 								 , 'post_parent' => $parent
 								 , 'post_content' => 'attachment content'
