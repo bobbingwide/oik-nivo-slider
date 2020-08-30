@@ -2,7 +2,7 @@
  * jQuery oik nivo-caption click  
  * http://oik-plugins.com/
  *
- * Copyright 2012, 2013 Bobbing Wide
+ * Copyright 2012, 2013, 2020 Bobbing Wide
  *
  *
  * We find the nivo-caption div for this slider and attach a click function
@@ -20,8 +20,8 @@
   jQuery.fn.oikNCClick = function(){
     var slider = $(this);
     var nc = $('.nivo-caption', slider);
-    nc.hover( function() { $(this).addClass( 'nivo-caption-hovered' ); }
-            , function() { $(this).removeClass( 'nivo-caption-hovered' ); } );
+    nc.on( 'mouseenter', function() { $(this).addClass( 'nivo-caption-hovered' ); } );
+    nc.on( 'mouseleave', function() { $(this).removeClass( 'nivo-caption-hovered' ); } );
     nc.css( 'cursor', 'pointer' );
     slider.on('click', ".nivo-caption", function(){
       var visible = $('a.nivo-imageLink:visible', slider);

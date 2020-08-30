@@ -1,6 +1,10 @@
 /*
  * jQuery Nivo Slider v3.2
+ * Originally hosted at
  * http://nivo.dev7studios.com
+ *
+ * This now indirectly links to https://themeisle.com/plugins/nivo-slider/
+ * which points to https://github.com/Codeinwp/Nivo-Slider-jQuery
  *
  * Copyright 2012, Dev7studios
  * Free to use and abuse under the MIT license.
@@ -79,7 +83,7 @@
         slider.append(sliderImg);
 
         // Detect Window Resize
-        $(window).resize(function() {
+        $(window).on( 'resize', function() {
             slider.children('img').width(slider.width());
             sliderImg.attr('src', vars.currentImage.attr('src'));
             sliderImg.stop().height('auto');
@@ -159,7 +163,7 @@
             //Set initial active link
             $('a:eq('+ vars.currentSlide +')', vars.controlNavEl).addClass('active');
             
-            $('a', vars.controlNavEl).bind('click', function(){
+            $('a', vars.controlNavEl).on('click', function(){
                 if(vars.running) return false;
                 if($(this).hasClass('active')) return false;
                 clearInterval(timer);
@@ -172,11 +176,12 @@
         
         //For pauseOnHover setting
         if(settings.pauseOnHover){
-            slider.hover(function(){
+            slider.on( 'mouseenter', function(){
                 vars.paused = true;
                 clearInterval(timer);
                 timer = '';
-            }, function(){
+            });
+            slider.on( 'mouseleave', function(){
                 vars.paused = false;
                 // Restart the timer
                 if(timer === '' && !settings.manualAdvance){
@@ -186,7 +191,7 @@
         }
         
         // Event when Animation finishes
-        slider.bind('nivo:animFinished', function(){
+        slider.on('nivo:animFinished', function(){
             sliderImg.attr('src', vars.currentImage.attr('src'));
             vars.running = false; 
             // Hide child links
@@ -258,7 +263,7 @@
                     if(cols === settings.boxCols-1){
                         slider.append(
                             $('<div class="nivo-box" name="'+ cols +'" rel="'+ rows +'"><img src="'+ vars.currentImage.attr('src') +'" style="position:absolute; width:'+ slider.width() +'px; height:auto; display:block; top:-'+ (boxHeight*rows) +'px; left:-'+ (boxWidth*cols) +'px;" /></div>').css({ 
-                                opacity:0,
+                                opacity:'0',
                                 left:(boxWidth*cols)+'px', 
                                 top:(boxHeight*rows)+'px',
                                 width:(slider.width()-(boxWidth*cols))+'px'
@@ -269,7 +274,7 @@
                     } else {
                         slider.append(
                             $('<div class="nivo-box" name="'+ cols +'" rel="'+ rows +'"><img src="'+ vars.currentImage.attr('src') +'" style="position:absolute; width:'+ slider.width() +'px; height:auto; display:block; top:-'+ (boxHeight*rows) +'px; left:-'+ (boxWidth*cols) +'px;" /></div>').css({ 
-                                opacity:0,
+                                opacity:'0',
                                 left:(boxWidth*cols)+'px', 
                                 top:(boxHeight*rows)+'px',
                                 width:boxWidth+'px'
