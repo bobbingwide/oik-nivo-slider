@@ -405,14 +405,14 @@
 			if(title.substr(0,1) == '#') title = $(title).html();
 
 			if(nivoCaption.css('opacity') != 0){
-				nivoCaption.find('p').stop().fadeTo(settings.animSpeed, 0, function(){
+				nivoCaption.find('p').stop().fadeTo(settings.animSpeed, '0', function(){
 					$(this).html(title);
-					$(this).stop().fadeTo(settings.animSpeed, 1);
+					$(this).stop().fadeTo(settings.animSpeed, '1');
 				});
 			} else {
 				nivoCaption.find('p').html(title);
 			}
-			nivoCaption.stop().fadeTo(settings.animSpeed, settings.captionOpacity);
+			nivoCaption.stop().fadeTo(settings.animSpeed, settings.captionOpacity.toString);
 		} else {
 			nivoCaption.stop().fadeTo(settings.animSpeed, '0');
 		}
@@ -499,7 +499,7 @@
 
         //Create caption
         slider.append(
-            $('<div class="nivo-caption"><p></p></div>').css({ display:'none', opacity:settings.captionOpacity })
+            $('<div class="nivo-caption"><p></p></div>').css({ display:'none', opacity:settings.captionOpacity.toString() })
         );		
         
         // Cross browser default caption opacity
@@ -523,9 +523,10 @@
             //Hide Direction nav
             if(settings.directionNavHide){
                 $('.nivo-directionNav', slider).hide();
-                slider.hover(function(){
+                slider.on( 'mouseenter', function(){
                     $('.nivo-directionNav', slider).show();
-                }, function(){
+                });
+                slider.on( 'mouseleave', function(){
                     $('.nivo-directionNav', slider).hide();
                 });
             }
@@ -603,11 +604,12 @@
         
         //For pauseOnHover setting
         if(settings.pauseOnHover){
-            slider.hover(function(){
+            slider.on( 'mouseenter', function(){
                 vars.paused = true;
                 clearInterval(timer);
                 timer = '';
-            }, function(){
+            });
+            slider.on( 'mouseleave', function(){
                 vars.paused = false;
                 //Restart the timer
                 if(timer == '' && !settings.manualAdvance){
@@ -617,7 +619,7 @@
         }
         
         //Event when Animation finishes
-        slider.bind('nivo:animFinished', function(){ 
+        slider.on('nivo:animFinished', function(){
             vars.running = false; 
             //Hide child links
             $(kids).each(function(){
