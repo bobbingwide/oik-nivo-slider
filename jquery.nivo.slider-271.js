@@ -414,7 +414,7 @@
 			}
 			nivoCaption.stop().fadeTo(settings.animSpeed, settings.captionOpacity);
 		} else {
-			nivoCaption.stop().fadeTo(settings.animSpeed, 0);
+			nivoCaption.stop().fadeTo(settings.animSpeed, '0');
 		}
 	}
 
@@ -503,7 +503,7 @@
         );		
         
         // Cross browser default caption opacity
-        $('.nivo-caption', slider).css('opacity', 0);
+        $('.nivo-caption', slider).css('opacity', '0');
 		
 
 		
@@ -582,7 +582,7 @@
         
         //Keyboard Navigation
         if(settings.keyboardNav){
-            $(window).keypress(function(event){
+            $(window).on( 'keypress', function(event){
                 //Left
                 if(event.keyCode == '37'){
                     if(vars.running) return false;
@@ -699,7 +699,7 @@
 		keyboardNav: true,
 		pauseOnHover: true,
 		manualAdvance: false,
-		captionOpacity: 0.8,
+		captionOpacity: '0.8',
 		prevText: 'Prev',
 		nextText: 'Next',
 		randomStart: false,

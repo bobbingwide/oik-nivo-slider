@@ -1,4 +1,4 @@
-<?php // (C) Copyright Bobbing Wide 2012-2017
+<?php // (C) Copyright Bobbing Wide 2012-2020
 
 /**
  * Format the Nivo output for posts which have attached images 
@@ -594,13 +594,13 @@ function bw_format_nivo_nggallery( $nggImage, $atts ) {
 /**
  * Enqueue the debug script if needed otherwise enqueue the minified (packed) one
  * 
- * @param string $version - must be 32, 31 or 271
+ * @param string $version - must be 32 or 271
 */
 function bw_nivo_enqueue_script( $version ) {
   if ( defined('SCRIPT_DEBUG' ) && SCRIPT_DEBUG == true) {
     $script = "jquery.nivo.slider-$version.js";
   } else {
-    $script = "jquery.nivo.slider-$version.pack.js"; 
+    $script = "jquery.nivo.slider-$version.min.js";
   } 
   wp_enqueue_script( "nivo-slider-$version-js", oik_url( $script, "oik-nivo-slider" ), array( 'jquery') );
 }
@@ -620,12 +620,11 @@ function bw_slider_id() {
 }
  
 /** 
- * Return the required nivo slider jQuery version for the selected theme
+ * Returns the required nivo slider jQuery version for the selected theme.
  * 
  * @param string $theme - theme name
  * 2.7.1 versions are: orman, pascal, default271 and oik271
- * 3.1 versions are: default, bar, dark, light, oik AND anything else
- * Now returns 3.2 for version 3.1 themes 
+ * 3.2 versions are: default, bar, dark, light, oik AND anything else
  */
 function bw_nivo_version( $theme ) { 
   static $versions = array( "default271" => "271" 
@@ -634,7 +633,7 @@ function bw_nivo_version( $theme ) {
                           , "pascal" => "271" 
                           );
   $version = bw_array_get( $versions, $theme, "32" );
-  return( $version );
+  return $version;
 }
 
 /**
