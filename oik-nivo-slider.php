@@ -4,7 +4,7 @@ Plugin Name: oik-nivo-slider
 Depends: oik
 Plugin URI: https://www.oik-plugins.com/oik-plugins/oik-nivo-slider/
 Description: [nivo] shortcode for the Nivo slider using oik
-Version: 1.15.3
+Version: 1.16.0
 Author: bobbingwide
 Author URI: https://bobbingwide.com/about-bobbing-wide
 Text Domain: oik-nivo-slider

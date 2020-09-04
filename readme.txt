@@ -3,8 +3,8 @@ Contributors: bobbingwide, vsgloik
 Donate link: https://www.oik-plugins.com/oik/oik-donate/
 Tags:  [nivo], shortcode, slider, jQuery, oik
 Requires at least: 4.9
-Tested up to: 5.3.2
-Stable tag: 1.15.3
+Tested up to: 5.5.1
+Stable tag: 1.16.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Gutenberg compatible: Yes
@@ -226,9 +226,6 @@ The plugin includes multiple versions of the FREE jQuery Nivo slider from Dev7 S
 * Version 3.2 is the latest version producing responsive slideshows.
 * oik-nivo-slider continues to support the themes for version 2.7.1: default271, orman, pascal and oik271
  
-= Does it support version 3.1 of the jQuery Nivo slider? =
-YES... from oik-nivo-slider version 1.7
-
 = Does it support version 3.2 of the jQuery Nivo slider? =
 YES... from oik-nivo-slider version 1.9
 
@@ -277,6 +274,9 @@ YES. See [oik-nivo-slider](https://www.oik-plugins.com/oik-plugins/oik-nivo-slid
 12. oik Nivo slider options page
 
 == Upgrade Notice ==
+= 1.16.0 =
+Updated for WordPress 5.5. Updated to work with jQuery 3.5.1, planned for WordPress 5.6
+
 = 1.15.3 = 
 Tested with WordPress 5.3.2, PHP 7.3 and 7.4, PHPUnit 8
 
@@ -356,6 +356,13 @@ Now depends on oik v2.4 or higher. Upgrade if you're using the Nivo v2.7.1 theme
 * first version works with oik version 1.11
 
 == Changelog ==
+= 1.16.0 =
+* Changed: Updated jQuery files to run without jQuery Migrate, [github bobbingwide oik-nivo-slider issues 11]
+* Changed: Updated jQuery files to support jQuery 3.5.1, [github bobbingwide oik-nivo-slider issues 11]
+* Tested: With WordPress 5.5.1 and WordPress Multi Site
+* Tested: With PHP 7.4
+* Tested: With PHPUnit 8
+
 = 1.15.3 =
 * Changed: Updated PHPUnit tests for PHPUnit 8,[github bobbingwide oik-nivo-slider issues 10]
 * Tested: With WordPress 5.3.2 and WordPress Multi Site
