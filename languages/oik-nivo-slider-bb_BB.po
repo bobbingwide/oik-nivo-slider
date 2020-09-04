@@ -1,48 +1,46 @@
-# Copyright (C) 2018 oik-nivo-slider
+# Copyright (C) 2020 oik-nivo-slider
 # This file is distributed under the same license as the oik-nivo-slider package.
 msgid ""
 msgstr ""
-"Project-Id-Version: oik-nivo-slider 1.15.2\n"
+"Project-Id-Version: oik-nivo-slider 1.16.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/oik-nivo-slider\n"
-"POT-Creation-Date: 2018-12-06 09:25:49+00:00\n"
+"POT-Creation-Date: 2020-09-04 11:28:37+00:00\n"
 "MIME-Version: 1.0\n"
 "Plural-Forms: nplurals=2; plural=n == 1 ? 0 : 1;\n"
 "Language: bb_BB\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2020-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-#: admin/oik-activation.php:23
+#: admin/oik-activation.php:29
 msgid "Install %1$s"
 msgstr "Isnatll %1$s"
 
 
-#: admin/oik-activation.php:55
+#: admin/oik-activation.php:61
 msgid "Activate %1$s"
 msgstr "Atcvitae %1$s"
 
 
-#: admin/oik-activation.php:73
+#: admin/oik-activation.php:79
 msgid "Upgrade %1$s"
 msgstr "Ugparde %1$s"
 
 
-#: admin/oik-activation.php:189
+#: admin/oik-activation.php:195
 msgid " version "
 msgstr " vreison "
 
 
-#: admin/oik-activation.php:191
+#: admin/oik-activation.php:197
 msgid "%1$s may not be fully functional."
 msgstr "%1$s mAy nOt bE fluly fnutcoianl."
 
 
-#: admin/oik-activation.php:193
-msgid ""
-"Please install and activate the required minimum version of this plugin: %1$s"
-msgstr ""
-"Pelsae isnatll And atcvitae thE rqeiuerd mnimium vreison Of tihs pulign: %1$s"
+#: admin/oik-activation.php:199
+msgid "Please install and activate the required minimum version of this plugin: %1$s"
+msgstr "Pelsae isnatll And atcvitae thE rqeiuerd mnimium vreison Of tihs pulign: %1$s"
 
 
 #: admin/oik-nivo-slider.php:8
@@ -130,7 +128,7 @@ msgid "Pause on hover"
 msgstr "Puase On hvoer"
 
 
-#: admin/oik-nivo-slider.php:82 nivo.php:790
+#: admin/oik-nivo-slider.php:82 nivo.php:789
 msgid "Manual advance"
 msgstr "Mnaaul avdnace"
 
@@ -146,12 +144,8 @@ msgstr "Svae cahgnes"
 
 
 #: admin/oik-nivo-slider.php:97
-msgid ""
-"These options for the jQuery Nivo slider control the default behaviour for "
-"each instance of the slider."
-msgstr ""
-"Tehse otpoins fOr thE juQrey Nvio siledr cnortol thE dfeualt bhevaoiur fOr "
-"ecah isnatcne Of thE siledr."
+msgid "These options for the jQuery Nivo slider control the default behaviour for each instance of the slider."
+msgstr "Tehse otpoins fOr thE juQrey Nvio siledr cnortol thE dfeualt bhevaoiur fOr ecah isnatcne Of thE siledr."
 
 
 #: nivo.php:428
@@ -164,121 +158,92 @@ msgid "NextGEN does not appear to be activated"
 msgstr "NxeGtEN deos nOt appaer tO bE atcvitaed"
 
 
-#: nivo.php:764
+#: nivo.php:763
 msgid "Display the nivo slideshow for attachments or other post types."
 msgstr "Dsilpay thE nvio siledhsow fOr attcamhnets Or ohter psot tpyes."
 
 
-#: nivo.php:769
+#: nivo.php:768
 msgid "image size"
 msgstr "iamge szie"
 
 
-#: nivo.php:778
+#: nivo.php:777
 msgid "post_type"
 msgstr "psot_tpye"
 
 
-#: nivo.php:778
+#: nivo.php:777
 msgid "Post type to display"
 msgstr "Psot tpye tO dsilpay"
 
 
-#: nivo.php:779
+#: nivo.php:778
 msgid "Theme for the slideshow"
 msgstr "Tehme fOr thE siledhsow"
 
 
-#: nivo.php:780
+#: nivo.php:779
 msgid "classes"
 msgstr "calsses"
 
 
-#: nivo.php:780
+#: nivo.php:779
 msgid "CSS classes"
 msgstr "CSS calsses"
 
 
-#: nivo.php:781
+#: nivo.php:780
 msgid "Link the images to the target post/page or media file"
 msgstr "Lnik thE iamegs tO thE traegt psot/pgae Or mdeia flie"
 
 
-#: nivo.php:782
+#: nivo.php:781
 msgid "Display the image title as the caption"
 msgstr "Dsilpay thE iamge ttile As thE cpaiton"
 
 
-#: nivo.php:783
+#: nivo.php:782
 msgid "format"
 msgstr "froamt"
 
 
-#: nivo.php:783
+#: nivo.php:782
 msgid "field format string"
 msgstr "feild froamt srtnig"
 
 
-#: nivo.php:784
+#: nivo.php:783
 msgid "Display the ribbon, if the theme supports it"
 msgstr "Dsilpay thE rbiobn, If thE tehme spuoptrs It"
 
 
-#: nivo.php:787
+#: nivo.php:786
 msgid "Thumbnail navigation"
 msgstr "Tuhbmanil nvagitaoin"
 
 
-#: nivo.php:788
+#: nivo.php:787
 msgid "Control navigation"
 msgstr "Cnortol nvagitaoin"
 
 
-#: nivo.php:789
+#: nivo.php:788
 msgid "pause"
 msgstr "puase"
 
 
-#: nivo.php:789
+#: nivo.php:788
 msgid "Pause time in milli seconds"
 msgstr "Puase tmie In mlili scenods"
 
 
-#: nivo.php:791
+#: nivo.php:790
 msgid "transition effect"
 msgstr "tarsntioin effcet"
 
 
-#: nivo.php:806
-msgid ""
-"Slideshow of the screenshots from oik-nivo-slider, using the oik theme and "
-"the current settings."
-msgstr ""
-"Siledhsow Of thE srceesnohts form OIk-nvio-siledr, uisng thE OIk tehme And "
-"thE cruernt steitgns."
-
-
-#. Plugin Name of the plugin/theme
-msgid "oik-nivo-slider"
-msgstr "OIk-nvio-siledr"
-
-
-#. Plugin URI of the plugin/theme
-msgid "https://www.oik-plugins.com/oik-plugins/oik-nivo-slider/"
-msgstr "https://www.oik-plugins.com/oik-plugins/oik-nivo-slider/"
-
-
-#. Description of the plugin/theme
-msgid "[nivo] shortcode for the Nivo slider using oik"
-msgstr "[nivo] sohtrocde fOr thE Nvio siledr uisng OIk"
-
-
-#. Author of the plugin/theme
-msgid "bobbingwide"
-msgstr "bboibgniwde"
-
-
-#. Author URI of the plugin/theme
-msgid "https://www.oik-plugins.com/author/bobbingwide"
-msgstr "https://www.oik-plugins.com/author/bobbingwide"
+#: nivo.php:805
+msgid "Slideshow of the screenshots from oik-nivo-slider, using the oik theme and the current settings."
+msgstr "Siledhsow Of thE srceesnohts form OIk-nvio-siledr, uisng thE OIk tehme And thE cruernt steitgns."
 
