@@ -94,7 +94,7 @@ function oik_nivo_slider_options() {
  * Display some usage notes for the oik-nivo-slider with an example
  */
 function oik_nivo_slider_usage() {
-  BW_::p( __( "These options for the jQuery Nivo slider control the default behaviour for each instance of the slider.", "oik-nivo-slider" ) );
+  BW_::p( __( "These options for the jQuery Nivo slider control the default behavior for each instance of the slider.", "oik-nivo-slider" ) );
   oik_require( "nivo.php", "oik-nivo-slider" );
 	oik_require_lib( "oik-sc-help" );
   bw_flush();
