@@ -1,16 +1,16 @@
-# Copyright (C) 2020 oik-nivo-slider
+# Copyright (C) 2021 oik-nivo-slider
 # This file is distributed under the same license as the oik-nivo-slider package.
 msgid ""
 msgstr ""
-"Project-Id-Version: oik-nivo-slider 1.16.0\n"
+"Project-Id-Version: oik-nivo-slider 1.16.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/oik-nivo-slider\n"
-"POT-Creation-Date: 2020-09-04 11:28:37+00:00\n"
+"POT-Creation-Date: 2021-03-15 18:07:57+00:00\n"
 "MIME-Version: 1.0\n"
 "Plural-Forms: nplurals=2; plural=n == 1 ? 0 : 1;\n"
 "Language: en_GB\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2020-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2021-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 #: admin/oik-activation.php:29
@@ -34,7 +34,8 @@ msgid "%1$s may not be fully functional."
 msgstr "%1$s may not be fully functional."
 
 #: admin/oik-activation.php:199
-msgid "Please install and activate the required minimum version of this plugin: %1$s"
+msgid ""
+"Please install and activate the required minimum version of this plugin: %1$s"
 msgstr "Please install and activate the required minimum version of this plugin: %1$s"
 
 #: admin/oik-nivo-slider.php:8
@@ -118,7 +119,9 @@ msgid "Save changes"
 msgstr "Save changes"
 
 #: admin/oik-nivo-slider.php:97
-msgid "These options for the jQuery Nivo slider control the default behaviour for each instance of the slider."
+msgid ""
+"These options for the jQuery Nivo slider control the default behavior for "
+"each instance of the slider."
 msgstr "These options for the jQuery Nivo slider control the default behaviour for each instance of the slider."
 
 #: nivo.php:428
@@ -198,6 +201,23 @@ msgid "transition effect"
 msgstr "transition effect"
 
 #: nivo.php:805
-msgid "Slideshow of the screenshots from oik-nivo-slider, using the oik theme and the current settings."
+msgid ""
+"Slideshow of the screenshots from oik-nivo-slider, using the oik theme and "
+"the current settings."
 msgstr "Slideshow of the screenshots from oik-nivo-slider, using the oik theme and the current settings."
+
+msgid "oik-nivo-slider"
+msgstr "oik-nivo-slider"
+
+msgid "https://www.oik-plugins.com/oik-plugins/oik-nivo-slider/"
+msgstr "https://www.oik-plugins.com/oik-plugins/oik-nivo-slider/"
+
+msgid "[nivo] shortcode for the Nivo slider using oik"
+msgstr "[nivo] shortcode for the Nivo slider using oik"
+
+msgid "bobbingwide"
+msgstr "bobbingwide"
+
+msgid "https://bobbingwide.com/about-bobbing-wide"
+msgstr "https://bobbingwide.com/about-bobbing-wide"
 
