@@ -1,10 +1,10 @@
 # oik-nivo-slider 
-![banner](https://raw.githubusercontent.com/bobbingwide/oik-nivo-slider/master/assets/oik-nivo-slider-banner-772x250.jpg)
+![banner](assets/oik-nivo-slider-banner-772x250.jpg)
 * Contributors: bobbingwide, vsgloik
 * Donate link: https://www.oik-plugins.com/oik/oik-donate/
 * Tags:  [nivo], shortcode, slider, jQuery, oik
 * Requires at least: 4.9
-* Tested up to: 5.7
+* Tested up to: 6.0.1
 * Stable tag: 1.16.1
 * License: GPLv2 or later
 * License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -275,6 +275,9 @@ YES. See [oik-nivo-slider](https://www.oik-plugins.com/oik-plugins/oik-nivo-slid
 12. oik Nivo slider options page
 
 ## Upgrade Notice 
+# 1.16.2 
+Tested with WordPress 6.0.1
+
 # 1.16.1 
 Tested with WordPress 5.7 and PHP 8.0
 
@@ -360,6 +363,11 @@ Now depends on oik v2.4 or higher. Upgrade if you're using the Nivo v2.7.1 theme
 * first version works with oik version 1.11
 
 ## Changelog 
+# 1.16.2 
+* Tested: With WordPress 6.0.1 and WordPress Multi Site
+* Tested: With PHP 8.0
+* Tested: With PHPUnit 9
+
 # 1.16.1 
 * Fixed: Corrected US English spelling of behavior,https://github.com/bobbingwide/oik-nivo-slider/issues/12
 * Tested: With WordPress 5.7 and WordPress Multi Site
