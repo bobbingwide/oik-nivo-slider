@@ -3,7 +3,7 @@ Contributors: bobbingwide, vsgloik
 Donate link: https://www.oik-plugins.com/oik/oik-donate/
 Tags:  [nivo], shortcode, slider, jQuery, oik
 Requires at least: 4.9
-Tested up to: 6.0.1
+Tested up to: 6.1
 Stable tag: 1.16.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -288,4 +288,3 @@ Tested with WordPress 6.0.1
 If you want to read more about the oik plugins then please visit the
 [oik plugin](https://www.oik-plugins.com/oik) 
 **"the oik plugin - for often included key-information"**
-
