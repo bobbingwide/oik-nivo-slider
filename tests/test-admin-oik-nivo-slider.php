@@ -1,4 +1,4 @@
-<?php // (C) Copyright Bobbing Wide 2017, 2018, 2020
+<?php // (C) Copyright Bobbing Wide 2017, 2018, 2020, 2023
 
 
 /**
@@ -150,6 +150,9 @@ class Tests_admin_oik_nivo_slider extends BW_UnitTestCase {
 	
 	function update_options() {
 		$bw_nivo_slider = get_option( "bw_nivo_slider" );
+		if ( false === $bw_nivo_slider) {
+			$bw_nivo_slider = [];
+		}
 		$bw_nivo_slider['effect'] = 'sliceDownRight';
 		$bw_nivo_slider['slices'] = '8';
 		$bw_nivo_slider['boxCols'] = '8';

@@ -1,4 +1,4 @@
-<?php // (C) Copyright Bobbing Wide 2012-2020
+<?php // (C) Copyright Bobbing Wide 2012-2020, 2023
 
 /**
  * Format the Nivo output for posts which have attached images 
@@ -703,7 +703,7 @@ function bw_nivo_slider( $atts=null ) {
     $posts = bw_get_posts( $atts );
   }  
   if ( $posts ) {
-    wp_enqueue_style( "nivo${theme}", oik_url( "themes/${theme}/${theme}.css", "oik-nivo-slider" ) ); 
+    wp_enqueue_style( "nivo{$theme}", oik_url( "themes/{$theme}/{$theme}.css", "oik-nivo-slider" ) ); 
     $version = bw_nivo_version( $theme );
     wp_enqueue_style( "nivoCSS-$version", oik_url( "nivo-slider-$version.css", "oik-nivo-slider" ) ); 
     bw_nivo_enqueue_script( $version );
@@ -731,7 +731,7 @@ function bw_nivo_slider( $atts=null ) {
       bw_jquery( "#slider-$slider_id", "oikNCClick", null, true );
     }  
     sdiv( $class );
-    sdiv( "slider-wrapper theme-${theme}" );
+    sdiv( "slider-wrapper theme-{$theme}" );
     if ( $ribbon )
       sediv( "ribbon" );
     //sediv( "nivoSlider-dummy" );
