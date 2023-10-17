@@ -1,4 +1,7 @@
 == Upgrade Notice ==
+= 1.16.2 =
+Tested with WordPress 6.0.1
+
 = 1.16.1 =
 Tested with WordPress 5.7 and PHP 8.0
 
@@ -84,6 +87,11 @@ Now depends on oik v2.4 or higher. Upgrade if you're using the Nivo v2.7.1 theme
 * first version works with oik version 1.11
 
 == Changelog ==
+= 1.16.2 =
+* Tested: With WordPress 6.0.1 and WordPress Multi Site
+* Tested: With PHP 8.0
+* Tested: With PHPUnit 9
+
 = 1.16.1 =
 * Fixed: Corrected US English spelling of behavior,[github bobbingwide oik-nivo-slider issues 12]
 * Tested: With WordPress 5.7 and WordPress Multi Site

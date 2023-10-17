@@ -2,9 +2,9 @@
 /**
 Plugin Name: oik-nivo-slider
 Depends: oik
-Plugin URI: https://www.oik-plugins.com/oik-plugins/oik-nivo-slider/
+Plugin URI: https://oik-plugins.com/oik-plugins/oik-nivo-slider/
 Description: [nivo] shortcode for the Nivo slider using oik
-Version: 1.16.2
+Version: 1.16.3
 Author: bobbingwide
 Author URI: https://bobbingwide.com/about-bobbing-wide
 Text Domain: oik-nivo-slider
@@ -12,7 +12,7 @@ Domain Path: /languages/
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-    Copyright 2012-2022 Bobbing Wide (email : herb@bobbingwide.com )
+    Copyright 2012-2023 Bobbing Wide (email : herb@bobbingwide.com )
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License version 2,
