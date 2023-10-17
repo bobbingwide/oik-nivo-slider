@@ -65,7 +65,7 @@ class Tests_nivo_php extends BW_UnitTestCase {
 		$expected .= "\n";
 		$expected .= '<div class="ribbon"></div>';
 		$expected .= "\n";
-		$expected .= '<div class="nivoSlider" id="slider-1"><img class=""';
+		$expected .= '<div class="nivoSlider" id="slider-1"><img decoding="async" class=""';
 		 
 		nivo__example();
 		$actual = bw_ret();
