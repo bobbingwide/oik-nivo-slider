@@ -1,4 +1,7 @@
 == Upgrade Notice ==
+= 1.16.3 =
+Upgrade for support for PHP 8.1 and PHP 8.2. Tested with WordPress 6.4
+
 = 1.16.2 =
 Tested with WordPress 6.0.1
 
@@ -87,6 +90,12 @@ Now depends on oik v2.4 or higher. Upgrade if you're using the Nivo v2.7.1 theme
 * first version works with oik version 1.11
 
 == Changelog ==
+= 1.16.3 =
+* Changed: Support PHP 8.1 and PHP 8.2 #13
+* Tested: With WordPress 6.4-beta3 and WordPress Multisite
+* Tested: With PHP 8.0, PHP 8.1 and PHP 8.2
+* Tested: With PHPUnit 9.6
+
 = 1.16.2 =
 * Tested: With WordPress 6.0.1 and WordPress Multi Site
 * Tested: With PHP 8.0
