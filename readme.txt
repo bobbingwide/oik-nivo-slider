@@ -278,7 +278,7 @@ YES. See [oik-nivo-slider](https://www.oik-plugins.com/oik-plugins/oik-nivo-slid
 Implements Required Plugins from WordPress 6.5. Tested with PHP 8.3
 
 == Changelog ==
-= 1.16.3 =
+= 1.16.4 =
 * Changed: Support PHP 8.3 #13
 * Tested: With WordPress 6.5 and WordPress Multisite
 * Tested: With PHP 8.3
