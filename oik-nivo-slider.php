@@ -34,7 +34,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  * Implement "oik_loaded" action for the oik-nivo-slider 
  */
 function oik_nivo_add_shortcodes() {
-  bw_add_shortcode( "nivo", "bw_nivo_slider", oik_path( "nivo.php", "oik-nivo-slider" ), false ); 
+  bw_add_shortcode( "nivo", "bw_nivo_slider", oik_path( "nivo.php", "oik-nivo-slider" ), false );
+
 }
 
 /**
@@ -78,7 +79,120 @@ function oik_nivo_activation() {
 function oik_nivo_loaded() {
   add_action( "admin_notices", "oik_nivo_activation", 12 );
   add_action( "oik_loaded", "oik_nivo_add_shortcodes" );
+  add_action( 'oik_loaded', 'oik_nivo_register_block');
   add_action( "oik_admin_menu", "oik_nivo_admin_menu" );
+}
+
+function oik_nivo_register_block() {
+
+	if ( is_admin() ) {
+		oik_nivo_register_editor_script();
+	}
+	load_plugin_textdomain( 'oik-nivo-slider', false, 'oik-nivo-slider/languages' );
+	$args      =[ 'render_callback'=>'oik_nivo_dynamic_block_nivo' ];
+	$registered = register_block_type_from_metadata( __DIR__ . '/build/nivo', $args );
+	bw_trace2( $registered, "registered");
+	//print_r( $registered);
+	//$registered = register_block_type_from_metadata( __DIR__ . '/src/second-block' );
+
+}
+
+/**
+ * Registers the block editor script manually.
+ *
+ * If the `editorScript` property was set to a file name in block.json, register_block_type_from_metadata() would normally register the `editorScript` automatically.
+ * But since we need to add the additional dependency on nivo-slider-32-js, we register this script manually, using logic similar to that in register_block_script_handle()
+ * and set the entry in block.json to the script handle.
+ */
+function oik_nivo_register_editor_script() {
+	$dir = dirname( __FILE__ );
+
+	$script_asset_path = "$dir/build/nivo.asset.php";
+	if ( ! file_exists( $script_asset_path ) ) {
+		_doing_it_wrong(
+			__FUNCTION__,
+			__( 'The asset file ( build/nivo.asset.php ) is missing.', 'oik-nivo-slider' ),
+			'1.0.0'
+		);
+		return false;
+	}
+	$index_js     = 'build/nivo.js';
+	$script_asset = require( $script_asset_path );
+	//bw_trace2( $script_asset );
+	if ( is_admin() ) {
+		oik_require( 'nivo.php', 'oik-nivo-slider');
+		bw_nivo_enqueue_script( '32');
+		$script_asset['dependencies'][] = 'nivo-slider-32-js';
+		//$script_asset['dependencies'][] = 'chartjs-adapter-date-fns-script';
+	}
+
+	wp_register_script(
+		'oik-nivo-slider-nivo-editor-script',
+		plugins_url( $index_js, __FILE__ ),
+		$script_asset['dependencies'],
+		$script_asset['version']
+	);
+}
+
+
+
+
+/**
+ * Server rendering dynamic CSV block
+ *
+ *
+ * @param array $attributes
+ * @return string generated HTML
+ */
+function oik_nivo_dynamic_block_nivo( $attributes ) {
+
+	//bw_backtrace();
+	$html = \oik\oik_blocks\oik_blocks_check_server_func( "nivo.php", "oik-nivo-slider", "bw_nivo_slider");
+	if ( !$html ) {
+		if ( function_exists( "oik_is_block_renderer") ) {
+			oik_is_block_renderer( true );
+		}
+		//do_action( "oik_add_shortcodes");
+		//$content = bw_array_get( $attributes, "content", null );
+		//bw_trace2( $content, "Content", true, BW_TRACE_VERBOSE );
+		//oik_require( "shortcodes/oik-csv.php", "oik-bob-bing-wide" );
+
+		/**
+		 * Just a quick test to display the Nivo slider screenshots
+
+		$attributes['post_type'] = 'screenshot:oik-nivo-slider';
+		$attributes['theme'] = 'oik';
+		$attributes['caption'] = 'n';
+		$attributes['link'] = 'n';
+ */
+		$html = bw_nivo_slider( $attributes );
+		$html = oik_nivo_server_side_wrapper( $attributes, $html );
+		bw_trace2( $html, "html", false, BW_TRACE_VERBOSE );
+	}
+	return $html;
+}
+
+/**
+ * Implements wrapper for Server Side Rendered blocks.
+ *
+ * Here we have to specifically add `has-text-align-something`
+ * to the classes in order to support left, center or right alignment.
+ *
+ * @param $attributes
+ * @param $html
+ * @return string
+ */
+function oik_nivo_server_side_wrapper( $attributes, $html ) {
+	$align_class_name=empty( $attributes['textAlign'] ) ? '' : "has-text-align-{$attributes['textAlign']}";
+	$align_class_name .= empty( $attributes['align'] ) ? '' : " has-text-align-{$attributes['align']}";
+	$extra_attributes  =[ 'class'=>$align_class_name ];
+	$wrapper_attributes = get_block_wrapper_attributes( $extra_attributes );
+	$html=sprintf(
+		'<div %1$s>%2$s</div>',
+		$wrapper_attributes,
+		$html
+	);
+	return $html;
 }
 
 oik_nivo_loaded();

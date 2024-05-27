@@ -1,0 +1,62 @@
+{
+  "apiVersion": 2,
+  "name": "oik-nivo-slider/nivo",
+  "version": "0.0.0",
+  "title": "Nivo slider",
+  "category": "common",
+  "icon": "slides",
+  "keywords": [
+    "slider",
+    "Nivo"
+  ],
+  "description": "Nivo slider",
+  "attributes": {
+    "theme": {
+      "type": "string",
+      "default": "default"
+    },
+    "id": {
+      "type": "string",
+      "default": ""
+    },
+    "effect": {
+      "type": "string",
+      "default": ""
+    },
+    "link": {
+      "type": "string",
+      "default": "y"
+    },
+    "caption": {
+      "type": "string",
+      "default": "y"
+    }
+  },
+  "supports": {
+    "anchor": false,
+    "align": false,
+    "alignWide": false,
+    "alignFull": false,
+    "html": false,
+    "customClassName": true,
+    "className": true,
+    "color": {
+      "gradients": false,
+      "link": false,
+      "text": true,
+      "background": true
+    },
+    "typography": {
+      "fontSize": false,
+      "lineHeight": false
+    },
+    "spacing": {
+      "margin": true,
+      "padding": true
+    }
+  },
+  "textdomain": "oik-nivo-slider",
+  "editorScript": "file:../../build/nivo.js",
+  "editorStyle": "file:../../build/nivo.css",
+  "style": "file:../../../build/style-nivo.css"
+}
