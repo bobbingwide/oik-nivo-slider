@@ -14,6 +14,8 @@ class Tests_admin_oik_nivo_slider extends BW_UnitTestCase {
 		parent::setUp();
 		//oik_require( "admin/oik-nivo-slider.php", "oik-nivo-slider" );
 		//oik_require_lib( "oik-sc-help" );
+		oik_require_lib('oik-admin');
+		oik_require_lib("bobbforms");
 	}
 	
 	/**
