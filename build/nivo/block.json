@@ -25,11 +25,11 @@
     },
     "link": {
       "type": "string",
-      "default": "y"
+      "default": "n"
     },
     "caption": {
       "type": "string",
-      "default": "y"
+      "default": "n"
     }
   },
   "supports": {
