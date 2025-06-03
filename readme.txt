@@ -3,8 +3,8 @@ Contributors: bobbingwide, vsgloik
 Donate link: https://www.oik-plugins.com/oik/oik-donate/
 Tags:  [nivo], shortcode, slider, jQuery, oik
 Requires at least: 4.9
-Tested up to: 6.5
-Stable tag: 1.16.4
+Tested up to: 6.8.1
+Stable tag: 1.17.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Gutenberg compatible: Yes
@@ -14,19 +14,10 @@ Gutenberg compatible: Yes
 == Description ==
 [nivo] shortcode for the jQuery Nivo slider; "The Most Awesome jQuery Image Slider"; reputed to be the world's most popular jQuery image slider.
 
-= New features in nivo v1.14.1 =
+= New feature in nivo v1.17.0 =
 
-* Now supports theme=custom
+* Added the Nivo slider block ( oik-nivo-slider/nivo ).
 
-= New feature in nivo v1.14.0 =
-
-* Add support for link=full, to open the original full sized image rather than the selected thumbnail= size
-
-= New feature in nivo v1.12 =
-
-* Choose the contents of the caption area using the format= parameter
-
-Note: The format parameter was first made available for the [bw_pages] shortcode and is also supported in [bw_cycle]; both part of the oik base plugin.  
 
 = Features of jQuery Nivo 3.2 =
 
@@ -40,7 +31,8 @@ See also [Nivo Slider](https://github.com/Codeinwp/Nivo-Slider-jQuery) for more 
 
 = Features of the oik nivo slider WordPress plugin =
 
-* [nivo] lazy smart shortcode
+* [nivo] lazy smart shortcode 
+* Nivo slider block
 * Displays attached images
 * Displays images attached to related content
 * Profile for nivo slider settings
@@ -71,7 +63,7 @@ Download oik from
 == Installation ==
 1. Upload the contents of the oik-nivo-slider plugin to the `/wp-content/plugins/oik-nivo-slider' directory
 1. Activate the oik-nivo-slider plugin through the 'Plugins' menu in WordPress
-1. Whenever you want to produce a Nivo slider use the [nivo] shortcode.
+1. Whenever you want to produce a Nivo slider use the [nivo] shortcode or the Nivo slider block.
 
 Note: oik-nivo-slider is dependent upon the oik plugin. You can activate it but it will not work unless oik is also activated.
 Download oik from 
@@ -274,15 +266,16 @@ YES. See [oik-nivo-slider](https://www.oik-plugins.com/oik-plugins/oik-nivo-slid
 12. oik Nivo slider options page
 
 == Upgrade Notice ==
-= 1.16.4 =
-Implements Required Plugins from WordPress 6.5. Tested with PHP 8.3
+= 1.17.0 =
+Now delivers the Nivo slider block.
 
 == Changelog ==
-= 1.16.4 =
-* Changed: Support PHP 8.3 #13
-* Tested: With WordPress 6.5 and WordPress Multisite
-* Tested: With PHP 8.3
-* Tested: With PHPUnit 9.6
+= 1.17.0=
+* Added: Add oik-nivo-slider/nivo block,[github bobbingwide oik-nivo-slider issues 14]
+* Changed: Update tests for PHPUnit 10 and 11,[github bobbingwide oik-nivo-slider issues 15]
+* Tested: With WordPress 6.8.1 and WordPress Multisite
+* Tested: With PHP 8.3 and PHP 8.4
+* Tested: With PHPUnit 9, 10 & 11
 
 == Further reading ==
 If you want to read more about the oik plugins then please visit the
