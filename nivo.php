@@ -658,6 +658,7 @@ function bw_override_options( $options, $options_field, $atts, $atts_field, $fie
     }  
   } 
   if ( $value !== null ) {
+	  bw_trace2( $options, "options");
     $options[$options_field] = $value ;
   }    
   return( $options ); 
@@ -713,7 +714,7 @@ function bw_nivo_slider( $atts=null ) {
       bw_jquery( "#slider-$slider_id", "nivoSlider271", bw_jkv( get_option( 'bw_nivo_slider' ) ), true );
     } else { 
       //bw_jquery( "#slider-$slider_id", "nivoSlider", bw_jkv( get_option( 'bw_nivo_slider' ) ), true );
-      $options = get_option( 'bw_nivo_slider' );
+      $options = get_option( 'bw_nivo_slider', [] );
       // 2013/01/29 - Implemented ability to override "controlNav" with a "nav" parameter.
       // and "pauseTime" with a "pause" parameter
       $options = bw_override_options( $options, "controlNav", $atts, "nav", "bw_validate_torf" ); 
