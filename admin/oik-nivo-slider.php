@@ -1,4 +1,4 @@
-<?php // (C) Copyright Bobbing Wide 2012-2017
+<?php // (C) Copyright Bobbing Wide 2012-2017, 2026
 
 /**
  * Define Nivo slider settings fields and page
@@ -56,12 +56,10 @@ function oik_nivo_options_do_page() {
         
 */
 function oik_nivo_slider_options() {
-  bw_form( "options.php" );
-  $option = "bw_nivo_slider"; 
-  $options = get_option( $option );     
-  stag( 'table class="form-table"' );
-  bw_flush();
-  settings_fields('oik_nivo_options');
+  $option = "bw_nivo_slider";
+  // Use grid rather than table for a11y.
+  bw_is_table( false );
+  $options = bw_form_start( $option, 'oik_nivo_options');
   $effect_options = array( 'random', 'sliceDownRight','sliceDownLeft','sliceUpRight','sliceUpLeft','sliceUpDown','sliceUpDownLeft','fold','fade',
                 'boxRandom','boxRain','boxRainReverse','boxRainGrow','boxRainGrowReverse', 'slideInLeft', 'slideInRight' );
   $effect_options_assoc = bw_assoc( $effect_options );                
@@ -83,7 +81,7 @@ function oik_nivo_slider_options() {
   
   BW_::bw_textfield_arr( $option, __( "Caption opacity", "oik-nivo-slider" ), $options, 'captionOpacity', 4 );
   
-  etag( "table" ); 
+  bw_table_or_grid_end();
   e( isubmit( "ok", __( "Save changes", "oik-nivo-slider" ), null, "button-primary" ) );
   			
   etag( "form" );
