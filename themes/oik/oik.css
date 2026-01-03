@@ -115,3 +115,6 @@ Supports Thumbs: true
 .theme-oik .nivo-caption a:hover {
     color:#fff;
 }
+
+.theme-oik a.nivo-prevNav,
+.theme-oik a.nivo-nextNav { opacity: 0.54; color: #000000; background-color: #ffffff; border-radius: 50%}
