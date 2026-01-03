@@ -58,6 +58,7 @@ function oik_nivo_admin_menu() {
  * v1.14.2 | oik v3.0.0
  * v1.15.0 | oik v3.2.1
  * v1.15.2 | oik v3.2.8
+ * v1.18.0 | oik v4.15.4
  *
  */ 
 function oik_nivo_activation() {
@@ -69,7 +70,7 @@ function oik_nivo_activation() {
       require_once( "admin/oik-activation.php" );
     }
   }  
-  $depends = "oik:3.2.8";
+  $depends = "oik:4.15.4";
   oik_plugin_lazy_activation( __FILE__, $depends, "oik_plugin_plugin_inactive" );
 }
 
