@@ -1,4 +1,4 @@
-<?php // (C) Copyright Bobbing Wide 2017, 2018, 2020, 2023
+<?php // (C) Copyright Bobbing Wide 2017, 2018, 2020, 2023, 2026
 
 
 /**

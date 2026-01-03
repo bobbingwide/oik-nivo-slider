@@ -1,29 +1,30 @@
 <input type="hidden" id="closedpostboxesnonce" name="closedpostboxesnonce" value="nonsense" />
 <div class="wrap">
-<h2>Nvio siledr otpoins</h2>
+<h1>Nvio siledr otpoins</h1>
 <div class="metabox-holder">
 <div class="postbox-container w50pc">
 <div class="meta-box-sortables ui-sortable">
 <div class="postbox " id="oik_nivo_slider_options">
+<div class="postbox-header">
+<h2 class="hndle">Dfeualt siledr otpoins</h2>
+<div class="handle-actions hide-if-no-js">
 <button type="button" class="handlediv" aria-expanded="true">
 <span class="screen-reader-text">Tgolge pnael: Dfeualt siledr otpoins</span>
 <span class="toggle-indicator" aria-hidden="true">
 </span>
 </button>
-<h3 class="hndle">Dfeualt siledr otpoins</h3>
+</div>
+</div>
 <div class="inside">
 <form method="post" action="options.php">
-<table class="form-table">
+<div class="bw_grid">
 <input type='hidden' name='option_page' value='oik_nivo_options' />
 <input type="hidden" name="action" value="update" />
 <input type="hidden" id="_wpnonce" name="_wpnonce" value="nonsense" />
 <input type="hidden" name="_wp_http_referer" value="/" />
-<tr>
-<td>
+<div>
 <label for="bw_nivo_slider[effect]">Effcet (effect=<i>effcet</i>)</label>
-</td>
-<td>
-<select name="bw_nivo_slider[effect]">
+<select name="bw_nivo_slider[effect]" id="bw_nivo_slider[effect]">
 <option value="random" >random</option>
 <option value="sliceDownRight"  selected='selected'>sliceDownRight</option>
 <option value="sliceDownLeft" >sliceDownLeft</option>
@@ -41,111 +42,62 @@
 <option value="slideInLeft" >slideInLeft</option>
 <option value="slideInRight" >slideInRight</option>
 </select>
-</td>
-</tr>
-<tr>
-<td>
+</div>
+<div>
 <label for="bw_nivo_slider[slices]">Silecs</label>
-</td>
-<td>
 <input type="text" size="2" name="bw_nivo_slider[slices]" id="bw_nivo_slider[slices]" value="8" class="" />
-</td>
-</tr>
-<tr>
-<td>
+</div>
+<div>
 <label for="bw_nivo_slider[boxCols]">BOx clos</label>
-</td>
-<td>
 <input type="text" size="2" name="bw_nivo_slider[boxCols]" id="bw_nivo_slider[boxCols]" value="8" class="" />
-</td>
-</tr>
-<tr>
-<td>
+</div>
+<div>
 <label for="bw_nivo_slider[boxRows]">BOx rwos</label>
-</td>
-<td>
 <input type="text" size="2" name="bw_nivo_slider[boxRows]" id="bw_nivo_slider[boxRows]" value="6" class="" />
-</td>
-</tr>
-<tr>
-<td>
+</div>
+<div>
 <label for="bw_nivo_slider[animSpeed]">Ainm seped</label>
-</td>
-<td>
 <input type="text" size="4" name="bw_nivo_slider[animSpeed]" id="bw_nivo_slider[animSpeed]" value="500" class="" />
-</td>
-</tr>
-<tr>
-<td>
+</div>
+<div>
 <label for="bw_nivo_slider[pauseTime]">Puase tmie (pause=<i>nnnn</i>)</label>
-</td>
-<td>
 <input type="text" size="4" name="bw_nivo_slider[pauseTime]" id="bw_nivo_slider[pauseTime]" value="10000" class="" />
-</td>
-</tr>
-<tr>
-<td>
+</div>
+<div>
 <label for="bw_nivo_slider[controlNav]">Cnortol nAv (nav=n|y)</label>
-</td>
-<td>
 <input type="hidden" name="bw_nivo_slider[controlNav]" value="0" />
-<input type="checkbox" name="bw_nivo_slider[controlNav]" id="bw_nivo_slider[controlNav]" checked="checked"/>
-</td>
-</tr>
-<tr>
-<td>
+<input type="checkbox" name="bw_nivo_slider[controlNav]" id="bw_nivo_slider[controlNav]" checked="checked" aria-label="bw_nivo_slider[controlNav]"/>
+</div>
+<div>
 <label for="bw_nivo_slider[controlNavThumbs]">Cnortol nAv tuhbms (thumbs=n|y)</label>
-</td>
-<td>
 <input type="hidden" name="bw_nivo_slider[controlNavThumbs]" value="0" />
-<input type="checkbox" name="bw_nivo_slider[controlNavThumbs]" id="bw_nivo_slider[controlNavThumbs]"/>
-</td>
-</tr>
-<tr>
-<td>
+<input type="checkbox" name="bw_nivo_slider[controlNavThumbs]" id="bw_nivo_slider[controlNavThumbs]" aria-label="bw_nivo_slider[controlNavThumbs]"/>
+</div>
+<div>
 <label for="bw_nivo_slider[directionNav]">Driceiton nAv</label>
-</td>
-<td>
 <input type="hidden" name="bw_nivo_slider[directionNav]" value="0" />
-<input type="checkbox" name="bw_nivo_slider[directionNav]" id="bw_nivo_slider[directionNav]" checked="checked"/>
-</td>
-</tr>
-<tr>
-<td>
+<input type="checkbox" name="bw_nivo_slider[directionNav]" id="bw_nivo_slider[directionNav]" checked="checked" aria-label="bw_nivo_slider[directionNav]"/>
+</div>
+<div>
 <label for="bw_nivo_slider[directionNavHide]">Driceiton nAv hdie</label>
-</td>
-<td>
 <input type="hidden" name="bw_nivo_slider[directionNavHide]" value="0" />
-<input type="checkbox" name="bw_nivo_slider[directionNavHide]" id="bw_nivo_slider[directionNavHide]"/>
-</td>
-</tr>
-<tr>
-<td>
+<input type="checkbox" name="bw_nivo_slider[directionNavHide]" id="bw_nivo_slider[directionNavHide]" aria-label="bw_nivo_slider[directionNavHide]"/>
+</div>
+<div>
 <label for="bw_nivo_slider[pauseOnHover]">Puase On hvoer</label>
-</td>
-<td>
 <input type="hidden" name="bw_nivo_slider[pauseOnHover]" value="0" />
-<input type="checkbox" name="bw_nivo_slider[pauseOnHover]" id="bw_nivo_slider[pauseOnHover]" checked="checked"/>
-</td>
-</tr>
-<tr>
-<td>
+<input type="checkbox" name="bw_nivo_slider[pauseOnHover]" id="bw_nivo_slider[pauseOnHover]" checked="checked" aria-label="bw_nivo_slider[pauseOnHover]"/>
+</div>
+<div>
 <label for="bw_nivo_slider[manualAdvance]">Mnaaul avdnace (manual=n|y)</label>
-</td>
-<td>
 <input type="hidden" name="bw_nivo_slider[manualAdvance]" value="0" />
-<input type="checkbox" name="bw_nivo_slider[manualAdvance]" id="bw_nivo_slider[manualAdvance]" checked="checked"/>
-</td>
-</tr>
-<tr>
-<td>
+<input type="checkbox" name="bw_nivo_slider[manualAdvance]" id="bw_nivo_slider[manualAdvance]" checked="checked" aria-label="bw_nivo_slider[manualAdvance]"/>
+</div>
+<div>
 <label for="bw_nivo_slider[captionOpacity]">Cpaiton oapicty</label>
-</td>
-<td>
 <input type="text" size="4" name="bw_nivo_slider[captionOpacity]" id="bw_nivo_slider[captionOpacity]" value="0.6" class="" />
-</td>
-</tr>
-</table>
+</div>
+</div>
 <input type="submit" name="ok" value="Svae cahgnes" class="button-primary" />
 </form>
 </div>
@@ -159,12 +111,16 @@
 <div class="postbox-container w50pc">
 <div class="meta-box-sortables ui-sortable">
 <div class="postbox " id="oik_nivo_slider_usage">
+<div class="postbox-header">
+<h2 class="hndle">Uasge ntoes</h2>
+<div class="handle-actions hide-if-no-js">
 <button type="button" class="handlediv" aria-expanded="true">
 <span class="screen-reader-text">Tgolge pnael: Uasge ntoes</span>
 <span class="toggle-indicator" aria-hidden="true">
 </span>
 </button>
-<h3 class="hndle">Uasge ntoes</h3>
+</div>
+</div>
 <div class="inside">
 <p>Tehse otpoins fOr thE juQrey Nvio siledr cnortol thE dfeualt bhevaoir fOr ecah isnatcne Of thE siledr.</p>
 <p>Siledhsow Of thE srceesnohts form OIk-nvio-siledr, uisng thE OIk tehme And thE cruernt steitgns.</p>
@@ -176,18 +132,18 @@
 <div class="ribbon">
 </div>
 <div class="nivoSlider" id="slider-2">
-<img decoding="async" class="" src="https://qw/src/wp-content/plugins/oik-nivo-slider/screenshot-1.jpg"  data-thumb="https://qw/src/wp-content/plugins/oik-nivo-slider/screenshot-1.jpg" />
-<img decoding="async" class="" src="https://qw/src/wp-content/plugins/oik-nivo-slider/screenshot-2.jpg"  data-thumb="https://qw/src/wp-content/plugins/oik-nivo-slider/screenshot-2.jpg"  style="display:none" />
-<img decoding="async" class="" src="https://qw/src/wp-content/plugins/oik-nivo-slider/screenshot-3.jpg"  data-thumb="https://qw/src/wp-content/plugins/oik-nivo-slider/screenshot-3.jpg"  style="display:none" />
-<img decoding="async" class="" src="https://qw/src/wp-content/plugins/oik-nivo-slider/screenshot-4.jpg"  data-thumb="https://qw/src/wp-content/plugins/oik-nivo-slider/screenshot-4.jpg"  style="display:none" />
-<img decoding="async" class="" src="https://qw/src/wp-content/plugins/oik-nivo-slider/screenshot-5.jpg"  data-thumb="https://qw/src/wp-content/plugins/oik-nivo-slider/screenshot-5.jpg"  style="display:none" />
-<img decoding="async" class="" src="https://qw/src/wp-content/plugins/oik-nivo-slider/screenshot-6.jpg"  data-thumb="https://qw/src/wp-content/plugins/oik-nivo-slider/screenshot-6.jpg"  style="display:none" />
-<img decoding="async" class="" src="https://qw/src/wp-content/plugins/oik-nivo-slider/screenshot-7.jpg"  data-thumb="https://qw/src/wp-content/plugins/oik-nivo-slider/screenshot-7.jpg"  style="display:none" />
-<img decoding="async" class="" src="https://qw/src/wp-content/plugins/oik-nivo-slider/screenshot-8.jpg"  data-thumb="https://qw/src/wp-content/plugins/oik-nivo-slider/screenshot-8.jpg"  style="display:none" />
-<img decoding="async" class="" src="https://qw/src/wp-content/plugins/oik-nivo-slider/screenshot-9.jpg"  data-thumb="https://qw/src/wp-content/plugins/oik-nivo-slider/screenshot-9.jpg"  style="display:none" />
-<img decoding="async" class="" src="https://qw/src/wp-content/plugins/oik-nivo-slider/screenshot-A.jpg"  data-thumb="https://qw/src/wp-content/plugins/oik-nivo-slider/screenshot-A.jpg"  style="display:none" />
-<img decoding="async" class="" src="https://qw/src/wp-content/plugins/oik-nivo-slider/screenshot-B.jpg"  data-thumb="https://qw/src/wp-content/plugins/oik-nivo-slider/screenshot-B.jpg"  style="display:none" />
-<img decoding="async" class="" src="https://qw/src/wp-content/plugins/oik-nivo-slider/screenshot-C.jpg"  data-thumb="https://qw/src/wp-content/plugins/oik-nivo-slider/screenshot-C.jpg"  style="display:none" />
+<img decoding="async" class="" src="https://qw/src/wp-content/plugins/oik-nivo-slider/screenshot-1.jpg" alt=""  data-thumb="https://qw/src/wp-content/plugins/oik-nivo-slider/screenshot-1.jpg" />
+<img decoding="async" class="" src="https://qw/src/wp-content/plugins/oik-nivo-slider/screenshot-2.jpg" alt=""  data-thumb="https://qw/src/wp-content/plugins/oik-nivo-slider/screenshot-2.jpg"  style="display:none" />
+<img decoding="async" class="" src="https://qw/src/wp-content/plugins/oik-nivo-slider/screenshot-3.jpg" alt=""  data-thumb="https://qw/src/wp-content/plugins/oik-nivo-slider/screenshot-3.jpg"  style="display:none" />
+<img decoding="async" class="" src="https://qw/src/wp-content/plugins/oik-nivo-slider/screenshot-4.jpg" alt=""  data-thumb="https://qw/src/wp-content/plugins/oik-nivo-slider/screenshot-4.jpg"  style="display:none" />
+<img decoding="async" class="" src="https://qw/src/wp-content/plugins/oik-nivo-slider/screenshot-5.jpg" alt=""  data-thumb="https://qw/src/wp-content/plugins/oik-nivo-slider/screenshot-5.jpg"  style="display:none" />
+<img decoding="async" class="" src="https://qw/src/wp-content/plugins/oik-nivo-slider/screenshot-6.jpg" alt=""  data-thumb="https://qw/src/wp-content/plugins/oik-nivo-slider/screenshot-6.jpg"  style="display:none" />
+<img decoding="async" class="" src="https://qw/src/wp-content/plugins/oik-nivo-slider/screenshot-7.jpg" alt=""  data-thumb="https://qw/src/wp-content/plugins/oik-nivo-slider/screenshot-7.jpg"  style="display:none" />
+<img decoding="async" class="" src="https://qw/src/wp-content/plugins/oik-nivo-slider/screenshot-8.jpg" alt=""  data-thumb="https://qw/src/wp-content/plugins/oik-nivo-slider/screenshot-8.jpg"  style="display:none" />
+<img decoding="async" class="" src="https://qw/src/wp-content/plugins/oik-nivo-slider/screenshot-9.jpg" alt=""  data-thumb="https://qw/src/wp-content/plugins/oik-nivo-slider/screenshot-9.jpg"  style="display:none" />
+<img decoding="async" class="" src="https://qw/src/wp-content/plugins/oik-nivo-slider/screenshot-A.jpg" alt=""  data-thumb="https://qw/src/wp-content/plugins/oik-nivo-slider/screenshot-A.jpg"  style="display:none" />
+<img decoding="async" class="" src="https://qw/src/wp-content/plugins/oik-nivo-slider/screenshot-B.jpg" alt=""  data-thumb="https://qw/src/wp-content/plugins/oik-nivo-slider/screenshot-B.jpg"  style="display:none" />
+<img decoding="async" class="" src="https://qw/src/wp-content/plugins/oik-nivo-slider/screenshot-C.jpg" alt=""  data-thumb="https://qw/src/wp-content/plugins/oik-nivo-slider/screenshot-C.jpg"  style="display:none" />
 </div>
 </div>
 </div>
