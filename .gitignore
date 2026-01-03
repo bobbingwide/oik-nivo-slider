@@ -2,3 +2,5 @@
 flh0grep.*
 .phpunit.result.cache
 .phpunit.cache/
+node_modules/
+package-lock.json
