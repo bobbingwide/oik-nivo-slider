@@ -1,4 +1,7 @@
 == Upgrade Notice ==
+= 1.17.0 =
+Now delivers the Nivo slider block.
+
 = 1.16.4 =
 Implements Required Plugins from WordPress 6.5. Tested with PHP 8.3
 
@@ -93,6 +96,13 @@ Now depends on oik v2.4 or higher. Upgrade if you're using the Nivo v2.7.1 theme
 * first version works with oik version 1.11
 
 == Changelog ==
+= 1.17.0=
+* Added: Add oik-nivo-slider/nivo block,[github bobbingwide oik-nivo-slider issues 14]
+* Changed: Update tests for PHPUnit 10 and 11,[github bobbingwide oik-nivo-slider issues 15]
+* Tested: With WordPress 6.8.1 and WordPress Multisite
+* Tested: With PHP 8.3 and PHP 8.4
+* Tested: With PHPUnit 9, 10 & 11
+
 = 1.16.4 =
 * Changed: Support PHP 8.3 #13
 * Tested: With WordPress 6.5 and WordPress Multisite

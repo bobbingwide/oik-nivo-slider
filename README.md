@@ -4,8 +4,8 @@
 * Donate link: https://www.oik-plugins.com/oik/oik-donate/
 * Tags:  [nivo], shortcode, slider, jQuery, oik
 * Requires at least: 4.9
-* Tested up to: 6.8.1
-* Stable tag: 1.17.0
+* Tested up to: 6.9
+* Stable tag: 1.18.0
 * License: GPLv2 or later
 * License URI: http://www.gnu.org/licenses/gpl-2.0.html
 * Gutenberg compatible: Yes
@@ -267,14 +267,13 @@ YES. See [oik-nivo-slider](https://www.oik-plugins.com/oik-plugins/oik-nivo-slid
 12. oik Nivo slider options page
 
 ## Upgrade Notice 
-# 1.17.0 
-Now delivers the Nivo slider block.
+# 1.18.0 
+Update for improved accessibility.
 
 ## Changelog 
-# 1.17.0
-* Added: Add oik-nivo-slider/nivo block,https://github.com/bobbingwide/oik-nivo-slider/issues/14
-* Changed: Update tests for PHPUnit 10 and 11,https://github.com/bobbingwide/oik-nivo-slider/issues/15
-* Tested: With WordPress 6.8.1 and WordPress Multisite
+# 1.18.0
+* Changed: Improved accessibility. Reduce Errors, Color Contrast errors and Alerts reported by WAVE #16
+* Tested: With WordPress 6.9 and WordPress Multisite
 * Tested: With PHP 8.3 and PHP 8.4
 * Tested: With PHPUnit 9, 10 & 11
 
