@@ -337,12 +337,13 @@ function bw_get_attached_file_name( $post_id, $atts ) {
  * @param array $atts - array of shortcode parameters
  */
 function bw_format_nivo_html_captions( $posts, $atts ) {
+	bw_trace2();
   $format = bw_array_get( $atts, "format", null );
   if ( $format ) {
     oik_require( "shortcodes/oik-pages.php" );
     $bw_post_formatter = bw_query_post_formatter( $atts );
     foreach ( $posts as $post ) {
-      // bw_trace2( $post );
+      //bw_trace2( $post, $bw_post_formatter, false );
       sdiv( "nivo-html-caption", $atts['slider-id'] . "-" . $post->ID );
       $bw_post_formatter( $post, $atts );
       ediv();
@@ -381,12 +382,12 @@ function bw_format_nivo_attachment( $post, $atts ) {
     } else {
     }
   } else {
-    $title = null;
+    $title = '';
   }   
   $image = bw_get_attached_file_name( $post->ID, $atts );
   bw_trace2( $image, "image", true, BW_TRACE_DEBUG );
   if ( $image ) {
-    $thumbnail = retimage( null, $image , $title, null, null, kv("data-thumb", $image) );
+    $thumbnail = retimage( null, $image , $title, null, null, kv("data-thumb", $image) . " " . kv("data-title", $title ));
 		if ( $atts['count'] ) {
 			$thumbnail = str_replace( "/>", ' style="display:none" />', $thumbnail );
 		}
@@ -483,7 +484,7 @@ function bw_format_nivo_screenshot( $fileurl, $atts ) {
   if ( bw_validate_torf( $atts['caption'] ) ) {
     $caption = $fileurl;
   } else {
-    $caption = null;
+    $caption = '';
   }    
   $image = retimage( null, $fileurl, $caption, null, null, kv("data-thumb", $fileurl) );
 	
@@ -701,7 +702,9 @@ function bw_nivo_slider( $atts=null ) {
     $posts = bw_get_special_post_type( $atts );
     $atts['post_type'] = substr( $atts['post_type'], 0, $pos ); 
   } else {
-    $posts = bw_get_posts( $atts );
+	  $args = $atts;
+	  unset( $args['format']);
+	  $posts = bw_get_posts( $args );
   }  
   if ( $posts ) {
     wp_enqueue_style( "nivo{$theme}", oik_url( "themes/{$theme}/{$theme}.css", "oik-nivo-slider" ) ); 
